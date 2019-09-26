@@ -7,17 +7,14 @@ console.log( bubbleSort(myArr) );
 
 
 function bubbleSort(myArr) {
-
     for (let i = 0; i < myArr.length; i++) {
-        compareValues(myArr);
+        floatHighestValueRight(myArr);
     }
-
     return myArr;
-
 }
 
 
-function compareValues(array) {
+function floatHighestValueRight(array) {
 
     for (let i = 0; i < array.length; i++) {
 
