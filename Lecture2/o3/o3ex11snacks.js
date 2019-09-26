@@ -7,8 +7,6 @@ När du “handlat klart”, skriv ut hur många påsar chips och hur många bit
 
 */
 
-
-
 const PRIS_CHIPS = 30; // kr
 const PRIS_GODIS = 14; // kr
 
@@ -35,25 +33,9 @@ while ( (budget/PRIS_GODIS) > 1 ) {
 
 console.log(`Det gick att köpa ${koptaChips} chips och ${koptaGogis} godis. Du har ${budget}kr kvar.`);
 
-/*
-while (budget > 0){
 
-    if ( (budget/PRIS_CHIPS) > 1){
-        koptaChips++;
-        budget = budget - PRIS_CHIPS;
-        continue;
-    } else if ( (budget/PRIS_GODIS) > 1 ) {
-        koptaGogis++;
-        budget = budget - PRIS_GODIS;
-        continue;
-    } else {
-        console.log(`Det gick att köpa ${koptaChips} chips och ${koptaGogis} godis. Du har ${budget}kr kvar.`);
-        break;
-    }
 
-}
 
-*/
 
 
 

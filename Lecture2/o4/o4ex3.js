@@ -1,19 +1,21 @@
 
 
 
-
-
-const DEFAULT_GREETING = 'Hey there';
+console.log( sayHi("Filip", "yoski broski", 3) );
 
 
 function sayHi(name, greeting, timesToGreet) {
 
+    const DEFAULT_GREETING = 'Hey there';
+
     if (greeting === "" || greeting === undefined || greeting === null)
         greeting = DEFAULT_GREETING;
 
-    if (timesToGreet === NaN || timesToGreet < 0 || timesToGreet === null || timesToGreet === undefined)
+    if ( timesToGreet < 0 || timesToGreet === null || timesToGreet === undefined)
         timesToGreet = 1;
 
-    console.log(greeting + " " + name);
-    
+    for (let i = 0; i < timesToGreet ; i++) {
+        console.log(greeting + " " + name);
+    }
+
 }

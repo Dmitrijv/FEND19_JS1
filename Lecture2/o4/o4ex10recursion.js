@@ -2,15 +2,19 @@
 
 //console.log(isNumberEven(0));
 //console.log(isNumberEven(1));
-console.log(isNumberEven(2));
+//console.log(isNumberEven(2));
 //console.log(isNumberEven(3));
 //console.log(isNumberEven(16));
 //console.log(isNumberEven(5523));
+console.log(isNumberEven(-4));
+
 
 
 function isNumberEven(number) {
 
-    //console.log(number);
+    // normalise negative numbers
+    if (number < 0)
+        number = -number;
 
     if (number === 0) {
         return true;
