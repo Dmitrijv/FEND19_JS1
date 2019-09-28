@@ -65,7 +65,7 @@ const cityE = {
     name: "Montpelier",
     population: 626299,
     citizens: {
-
+        person1: "Converted"
     },
 };
 
@@ -73,7 +73,7 @@ const cityF = {
     name: "Montpelier",
     population: 626299,
     citizens: {
-        a:""
+        person1: "Convert"
     },
 };
 
@@ -110,8 +110,9 @@ function deepCompare(objA, objB) {
         }
 
         // if both values are objects validate them recursivly
-        if ( (typeof objA[key] === 'object') && (typeof objB[key] === 'object') ){
+        if ((typeof objA[key] === 'object') && (typeof objB[key] === 'object')){
             valuesAreEqual = deepCompare(objA[key], objB[key]);
+        // check if values stored at this key are the same in both objects
         } else {
             valuesAreEqual = objA[key] === objB[key];
         }
