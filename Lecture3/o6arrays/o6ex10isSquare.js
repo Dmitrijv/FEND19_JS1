@@ -15,6 +15,7 @@ function checkIfSquare(multiArray) {
     for (let i = 0; i < multiArray.length; i++) {
 
         const row = multiArray[i];
+
         if ( !(row.length === myMultiArray.length) )
             return false;
 
