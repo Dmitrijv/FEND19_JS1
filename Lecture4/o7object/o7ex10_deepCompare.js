@@ -117,7 +117,7 @@ function deepCompare(objA, objB) {
             valuesAreEqual = objA[key] === objB[key];
         }
 
-        // if an incosistency is found return early so the rest of the tree is not evaluated for no reason
+        // if an incosistency is found return early so the rest of the tree is not evaluated for no reason.
         if (valuesAreEqual === false){
             return false;
         }
