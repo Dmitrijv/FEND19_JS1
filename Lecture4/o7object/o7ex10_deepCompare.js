@@ -63,7 +63,7 @@ const cityC = {
 
 const cityE = {
     name: "Montpelier",
-    population: 3/"s",
+    population: 3,
     citizens: {
         person1: "Convert",
     },
@@ -71,7 +71,8 @@ const cityE = {
 
 const cityF = {
     name: "Montpelier",
-    population: 3/"e",
+    population: 3,
+    area: 2353,
     citizens: {
         person1: "Convert",
     },
@@ -110,7 +111,7 @@ function deepCompare(objA, objB) {
     for (let key of Object.keys(objA)) {
 
         // check if this key is present in both objects
-        if ( (Object.keys(objB).includes(key) !== true) ){
+        if (Object.keys(objB).includes(key) !== true){
             return false;
         }
 

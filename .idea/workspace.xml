@@ -54,8 +54,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Lecture4/o7object/o7ex10_deepCompare.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="116" column="54" selection-start-line="116" selection-start-column="54" selection-end-line="116" selection-end-column="54" />
+            <state relative-caret-position="36">
+              <caret line="74" column="15" lean-forward="true" selection-start-line="74" selection-start-column="15" selection-end-line="74" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -333,7 +333,7 @@
       <workItem from="1569695277374" duration="10202000" />
       <workItem from="1569707264462" duration="1813000" />
       <workItem from="1569709217320" duration="281000" />
-      <workItem from="1569746764212" duration="1237000" />
+      <workItem from="1569746764212" duration="6801000" />
     </task>
     <task id="LOCAL-00001" summary="removed idea folder">
       <created>1569429375009</created>
@@ -377,11 +377,25 @@
       <option name="project" value="LOCAL" />
       <updated>1569709283802</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="comment pass on deepCompare">
+      <created>1569748959972</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1569748959973</updated>
+    </task>
+    <task id="LOCAL-00008" summary="deepCompare will now handle NaN correctly">
+      <created>1569754189593</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1569754189593</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86790000" />
+    <option name="totallyTimeSpent" value="92354000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -414,7 +428,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32937366" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49851853" visible="true" weight="0.1825054" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49851853" visible="true" weight="0.44276458" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5014815" side_tool="true" weight="0.5511222" />
       <window_info active="true" anchor="bottom" id="SVN Repositories" order="12" weight="0.32971016" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.22463769" />
@@ -474,7 +488,8 @@
     <MESSAGE value="refactor pass on array exercises" />
     <MESSAGE value="solved exercises for lecture 4" />
     <MESSAGE value="comment pass on deepCompare" />
-    <option name="LAST_COMMIT_MESSAGE" value="comment pass on deepCompare" />
+    <MESSAGE value="deepCompare will now handle NaN correctly" />
+    <option name="LAST_COMMIT_MESSAGE" value="deepCompare will now handle NaN correctly" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test.js">
@@ -753,8 +768,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Lecture4/o7object/o7ex10_deepCompare.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="116" column="54" selection-start-line="116" selection-start-column="54" selection-end-line="116" selection-end-column="54" />
+        <state relative-caret-position="36">
+          <caret line="74" column="15" lean-forward="true" selection-start-line="74" selection-start-column="15" selection-end-line="74" selection-end-column="15" />
         </state>
       </provider>
     </entry>
