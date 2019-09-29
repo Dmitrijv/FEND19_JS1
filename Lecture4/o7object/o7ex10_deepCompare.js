@@ -104,7 +104,7 @@ function deepCompare(objA, objB) {
     let valuesAreEqual;
     for (let key of Object.keys(objA)) {
 
-        // a key is not preset in both objects
+        // check if this key is preset in both objects
         if ( (Object.keys(objB).includes(key) !== true) ){
             return false;
         }
@@ -114,7 +114,7 @@ function deepCompare(objA, objB) {
             valuesAreEqual = deepCompare(objA[key], objB[key]);
         // check if values stored at this key are the same in both objects
         } else {
-            valuesAreEqual = objA[key] === objB[key];
+            valuesAreEqual = (objA[key] === objB[key]);
         }
 
         // if an incosistency is found return early so the rest of the tree is not evaluated for no reason.
