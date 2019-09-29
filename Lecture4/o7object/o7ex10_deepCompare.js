@@ -63,20 +63,19 @@ const cityC = {
 
 const cityE = {
     name: "Montpelier",
-    population: 626299,
+    population: 3/"s",
     citizens: {
-        person1: "Converted"
+        person1: "Convert",
     },
 };
 
 const cityF = {
     name: "Montpelier",
-    population: 626299,
+    population: 3/"e",
     citizens: {
-        person1: "Convert"
+        person1: "Convert",
     },
 };
-
 
 console.log('Standard tests: ');
 console.log(deepCompare(objA, objB)); // true
@@ -86,10 +85,16 @@ console.log('Custom tests: ');
 console.log(deepCompare(cityE, cityF)); // false
 console.log(deepCompare(cityA, cityC)); // true
 
+
 function deepCompare(objA, objB) {
 
     //console.log(objA);
     //console.log(objB);
+
+    if ((objA === null) && (objB === null)){
+        return true;
+    }
+
     const aLength = Object.keys(objA).length;
     const bLength = Object.keys(objB).length;
 
@@ -104,20 +109,20 @@ function deepCompare(objA, objB) {
     let valuesAreEqual;
     for (let key of Object.keys(objA)) {
 
-        // check if this key is preset in both objects
+        // check if this key is present in both objects
         if ( (Object.keys(objB).includes(key) !== true) ){
             return false;
         }
 
         // if both values are objects validate them recursivly
-        if ((typeof objA[key] === 'object') && (typeof objB[key] === 'object')){
+        if ((typeof objA[key] === 'object') && (typeof objB[key] === 'object')) {
             valuesAreEqual = deepCompare(objA[key], objB[key]);
-        // check if values stored at this key are the same in both objects
+        // check if values stored at this key are the same
         } else {
-            valuesAreEqual = (objA[key] === objB[key]);
+            valuesAreEqual = Object.is(objA[key], objB[key]);
         }
 
-        // if an incosistency is found return early so the rest of the tree is not evaluated for no reason.
+        // if an incosistency is found return early
         if (valuesAreEqual === false){
             return false;
         }
