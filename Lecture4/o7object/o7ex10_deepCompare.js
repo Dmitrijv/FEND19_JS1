@@ -93,7 +93,7 @@ function deepCompare(objA, objB) {
     //console.log(objB);
 
     if ((objA === null) && (objB === null)){
-        return true;
+        return false;
     }
 
     const aLength = Object.keys(objA).length;
