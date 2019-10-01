@@ -93,7 +93,7 @@ function deepCompare(objA, objB) {
     //console.log(objB);
 
     if ((objA === null) && (objB === null)){
-        return false;
+        return true;
     }
 
     const aLength = Object.keys(objA).length;
@@ -115,7 +115,7 @@ function deepCompare(objA, objB) {
             return false;
         }
 
-        // if both values are objects validate them recursivly
+        // if both values are objects validate them recursively
         if ((typeof objA[key] === 'object') && (typeof objB[key] === 'object')) {
             valuesAreEqual = deepCompare(objA[key], objB[key]);
         // check if values stored at this key are the same

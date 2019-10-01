@@ -5,12 +5,9 @@ const myObj = {
 };
 
 console.log(delete myObj.a);
-
 console.log(myObj);
 
-
 function filterDuplicates(list) {
-
 
     console.log(list);
     const returnList = [];
