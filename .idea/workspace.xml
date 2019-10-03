@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4cd2a4e-3f78-4312-8383-ff087efccebd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Lecture5/o8_html/cv.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lecture5/o8_html/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lecture5/o8_html/listor.html" afterDir="false" />
+    <list default="true" id="d4cd2a4e-3f78-4312-8383-ff087efccebd" name="Default Changelist" comment="solved lecture 6 exercise">
+      <change afterPath="$PROJECT_DIR$/Lecture6/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lecture6/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -44,17 +43,35 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lecture4/o7object/o7ex10_deepCompare.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="95" column="21" lean-forward="true" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
+            <state relative-caret-position="180">
+              <caret line="109" column="23" selection-start-line="109" selection-start-column="23" selection-end-line="109" selection-end-column="23" />
               <folding>
                 <element signature="e#14#109#0" />
                 <element signature="e#125#220#0" />
                 <element signature="e#236#353#0" />
                 <element signature="e#371#642#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Lecture6/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Lecture6/styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
             </state>
           </provider>
         </entry>
@@ -66,6 +83,7 @@
       <list>
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -76,9 +94,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Lecture2/o5/o5ex2ucfirst.js" />
-        <option value="$PROJECT_DIR$/Lecture2/o5/o5ex3spam.js" />
-        <option value="$PROJECT_DIR$/Lecture2/o5/o5ex4truncate.js" />
         <option value="$PROJECT_DIR$/Lecture2/o3/o3ex1.js" />
         <option value="$PROJECT_DIR$/Lecture2/o5/o5ex5url.js" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -126,7 +141,10 @@
         <option value="$PROJECT_DIR$/Lecture5/o5_html/listor.html" />
         <option value="$PROJECT_DIR$/Lecture5/o5_html/index.html" />
         <option value="$PROJECT_DIR$/Lecture5/o5_html/cv.html" />
+        <option value="$PROJECT_DIR$/test.js" />
         <option value="$PROJECT_DIR$/Lecture4/o7object/o7ex10_deepCompare.js" />
+        <option value="$PROJECT_DIR$/Lecture6/styles.css" />
+        <option value="$PROJECT_DIR$/Lecture6/index.html" />
       </list>
     </option>
   </component>
@@ -142,9 +160,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="166" />
-    <option name="y" value="49" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="-20" />
+    <option name="y" value="-17" />
     <option name="width" value="1400" />
     <option name="height" value="920" />
   </component>
@@ -167,7 +185,7 @@
             <path>
               <item name="FEND19_JavaScript_1" type="b2602c69:ProjectViewProjectNode" />
               <item name="FEND19_JavaScript_1" type="462c0819:PsiDirectoryNode" />
-              <item name="Lecture5" type="462c0819:PsiDirectoryNode" />
+              <item name="Lecture6" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -185,6 +203,7 @@
     <property name="full.screen.before.presentation.mode" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.16.3" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Lecture3/o6" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -192,7 +211,7 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -220,7 +239,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
+  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
+    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/FEND19_JavaScript_1/FEND19_JS1/Lecture6/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/FEND19_JavaScript_1/FEND19_JS1/Lecture5/o5_html/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -229,6 +251,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html (1)" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Node.js.test.js" />
       </list>
@@ -263,7 +286,9 @@
       <workItem from="1569707264462" duration="1813000" />
       <workItem from="1569709217320" duration="281000" />
       <workItem from="1569746764212" duration="6801000" />
-      <workItem from="1569913403606" duration="86000" />
+      <workItem from="1569913403606" duration="7547000" />
+      <workItem from="1569967378397" duration="1802000" />
+      <workItem from="1570086041730" duration="4704000" />
     </task>
     <task id="LOCAL-00001" summary="removed idea folder">
       <created>1569429375009</created>
@@ -328,11 +353,25 @@
       <option name="project" value="LOCAL" />
       <updated>1569881048386</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="&quot;solved&quot; exercises for lecture 5">
+      <created>1569913694017</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1569913694017</updated>
+    </task>
+    <task id="LOCAL-00011" summary="deepCompare will return true if both objects are null">
+      <created>1569917317811</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1569917317811</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95678000" />
+    <option name="totallyTimeSpent" value="109645000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -344,10 +383,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="0" y="0" width="1600" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4954955" visible="true" weight="0.16838047" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4954955" visible="true" weight="0.1722365" />
       <window_info id="Structure" order="1" sideWeight="0.5045045" side_tool="true" weight="0.16323908" />
       <window_info id="npm" order="2" sideWeight="0.5024155" side_tool="true" weight="0.19344473" />
       <window_info id="Image Layers" order="3" />
@@ -365,10 +404,10 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32937366" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49851853" visible="true" weight="0.3375" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49851853" weight="0.3375" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5014815" side_tool="true" weight="0.5511222" />
       <window_info active="true" anchor="bottom" id="SVN Repositories" order="12" weight="0.32971016" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.22463769" />
+      <window_info active="true" anchor="bottom" id="Messages" order="13" visible="true" weight="0.29440993" />
       <window_info anchor="bottom" id="LuaCheck" order="14" />
       <window_info active="true" anchor="bottom" id="GitHub Pull Requests" order="15" weight="0.32937366" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -427,29 +466,12 @@
     <MESSAGE value="comment pass on deepCompare" />
     <MESSAGE value="deepCompare will now handle NaN correctly" />
     <MESSAGE value="deepCompare will should return false if both objects are null" />
-    <option name="LAST_COMMIT_MESSAGE" value="deepCompare will should return false if both objects are null" />
+    <MESSAGE value="&quot;solved&quot; exercises for lecture 5" />
+    <MESSAGE value="deepCompare will return true if both objects are null" />
+    <MESSAGE value="solved lecture 6 exercise" />
+    <option name="LAST_COMMIT_MESSAGE" value="solved lecture 6 exercise" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lecture3/o5string/o5ex5url.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="16" selection-start-line="16" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lecture2/o3/o3ex5.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lecture2/o3/o3ex3.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lecture2/o3/o3ex2.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -682,6 +704,20 @@
     <entry file="file://$PROJECT_DIR$/Lecture5/o5_html/listor.html" />
     <entry file="file://$PROJECT_DIR$/Lecture5/o5_html/index.html" />
     <entry file="file://$PROJECT_DIR$/Lecture5/o5_html/cv.html" />
+    <entry file="file://$PROJECT_DIR$/Lecture5/o8_html/cv.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="30" column="31" lean-forward="true" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Lecture3/o6arrays/o6ex5sum.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -698,14 +734,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Lecture4/o7object/o7ex10_deepCompare.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="95" column="21" lean-forward="true" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
+        <state relative-caret-position="180">
+          <caret line="109" column="23" selection-start-line="109" selection-start-column="23" selection-end-line="109" selection-end-column="23" />
           <folding>
             <element signature="e#14#109#0" />
             <element signature="e#125#220#0" />
             <element signature="e#236#353#0" />
             <element signature="e#371#642#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lecture6/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lecture6/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
