@@ -5,7 +5,7 @@
 Det finns ett kafé som ger 10% rabatt om man spenderar minst 1000kr på kaffe per månad.
 Kostnaden per kaffekopp är i genomsnitt 12kr.
 
-Skapa ett variabel som innehåller hur många koppar en person köper i genomsnitt per dag.
+Skapa ett variabel som innehåller hur många koppar en personName köper i genomsnitt per dag.
 (Du kan själv ändra värdet i variabeln varje gång du kör programmet).
 Programmet ska via console.log() visa om personen har rätt till rabatten och även visa hur mycket rabatt personen får.
 
