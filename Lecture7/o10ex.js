@@ -8,7 +8,23 @@
 
 //alert('Window takes up ' +  Math.round((window.innerHeight/screen.height)*100) + '% x ' + Math.round((window.innerWidth/screen.width)*100)+'%');
 
-//alert(navigator.userAgent);
+alert("It is "+getBrowser(navigator.userAgent)+"!");
+
+function getBrowser(userAgent) {
+
+    if (userAgent.includes("Edge"))
+        return "Edge";
+    if (userAgent.includes("OPR"))
+        return "Operah";
+    if (userAgent.includes("Firefox"))
+        return "Firefox";
+    if (userAgent.includes("Safari") && !userAgent.includes("Chrome"))
+        return "Safari";
+    if (userAgent.includes("Chrome") && (!userAgent.includes("OPR") || !userAgent.includes("Edge")))
+        return "Chrome";
+    return "Unknown browser";
+
+}
 
 
 //alert(location.href);
@@ -211,6 +227,8 @@ alert("Bye");
 
 */
 
+
+/*
 const persons = [
     {
         name: 'Akira',
@@ -276,12 +294,11 @@ while (personName !== null || personName !== ""){
 }
 
 
-
 function getPerson(array, personName) {
     return array.find( ({ name }) => name === personName );
 }
 
-
+*/
 
 
 
