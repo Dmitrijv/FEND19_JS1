@@ -20,7 +20,7 @@ function getBrowser(userAgent) {
         return "Firefox";
     if (userAgent.includes("Safari") && !userAgent.includes("Chrome"))
         return "Safari";
-    if (userAgent.includes("Chrome") && (!userAgent.includes("OPR") || !userAgent.includes("Edge")))
+    if (userAgent.includes("Chrome") && !userAgent.includes("OPR") && !userAgent.includes("Edge"))
         return "Chrome";
     return "Unknown browser";
 

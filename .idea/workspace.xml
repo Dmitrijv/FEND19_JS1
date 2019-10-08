@@ -36,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Lecture7/o10ex.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="52" lean-forward="true" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+            <state relative-caret-position="414">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -286,7 +286,9 @@
       <workItem from="1570431924467" duration="10129000" />
       <workItem from="1570443422549" duration="1269000" />
       <workItem from="1570444821683" duration="47000" />
-      <workItem from="1570528589026" duration="1164000" />
+      <workItem from="1570528589026" duration="1235000" />
+      <workItem from="1570530266167" duration="30000" />
+      <workItem from="1570534375621" duration="396000" />
     </task>
     <task id="LOCAL-00001" summary="removed idea folder">
       <created>1569429375009</created>
@@ -379,11 +381,18 @@
       <option name="project" value="LOCAL" />
       <updated>1570443516004</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added correct solution to exercise 3">
+      <created>1570529805496</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1570529805496</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122303000" />
+    <option name="totallyTimeSpent" value="122800000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -396,8 +405,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1600" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4954955" visible="true" weight="0.21529563" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4954955" visible="true" weight="0.22043702" />
       <window_info id="Structure" order="1" sideWeight="0.5045045" side_tool="true" weight="0.16323908" />
       <window_info id="npm" order="2" sideWeight="0.5024155" side_tool="true" weight="0.19344473" />
       <window_info id="Image Layers" order="3" />
@@ -413,7 +423,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32974428" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32937366" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.15900621" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49851853" weight="0.2931677" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5014815" side_tool="true" weight="0.5511222" />
@@ -481,7 +491,8 @@
     <MESSAGE value="deepCompare will return true if both objects are null" />
     <MESSAGE value="solved lecture 6 exercise" />
     <MESSAGE value="solved lecture 7 exercises" />
-    <option name="LAST_COMMIT_MESSAGE" value="solved lecture 7 exercises" />
+    <MESSAGE value="added correct solution to exercise 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="added correct solution to exercise 3" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Lecture3/o6arrays/o6ex8makeUnique.js">
@@ -763,8 +774,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Lecture7/o10ex.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="52" lean-forward="true" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+        <state relative-caret-position="414">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
