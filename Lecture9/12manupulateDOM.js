@@ -52,7 +52,7 @@ const header = document.createElement("header");
 newDiv.appendChild(header);
 
 const innerDiv = document.createElement("div");
-price.classList.add('pull_left');
+innerDiv.classList.add('pull_left');
 header.appendChild(innerDiv);
 
 const innerLink = document.createElement("a");
