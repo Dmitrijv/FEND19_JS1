@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4cd2a4e-3f78-4312-8383-ff087efccebd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Lecture8/01blocket.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lecture8/blocket.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lecture8/msgList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lecture8/msglist.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lecture9/12manupulateDOM.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lecture9/blocket.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lecture9/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,61 +27,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lecture3/o6arrays/o6ex5sum.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" selection-start-line="9" selection-end-line="11" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lecture7/o10ex.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5400">
-              <caret line="300" column="2" selection-start-line="300" selection-end-line="300" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lecture8/blocket.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="32" column="115" selection-start-line="32" selection-start-column="115" selection-end-line="32" selection-end-column="115" />
-              <folding>
-                <element signature="e#928#933#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lecture8/01blocket.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1440">
+            <state relative-caret-position="527">
               <caret line="80" column="22" selection-start-line="79" selection-end-line="80" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lecture8/msgList.html">
+        <entry file="file://$PROJECT_DIR$/Lecture9/blocket.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" selection-start-line="8" selection-end-line="27" />
+            <state relative-caret-position="108">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Lecture8/msglist.js">
+        <entry file="file://$PROJECT_DIR$/Lecture9/12manupulateDOM.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Lecture9/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-88">
+              <caret line="19" column="10" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -92,9 +67,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -111,9 +86,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Lecture3/o5/o5ex3spam.js" />
-        <option value="$PROJECT_DIR$/Lecture3/o6/o6ex4max.js" />
-        <option value="$PROJECT_DIR$/Lecture3/o6/o6ex5sum.js" />
         <option value="$PROJECT_DIR$/Lecture3/o6/o6ex6jazz.js" />
         <option value="$PROJECT_DIR$/Lecture3/o6/o6ex7reverseArray.js" />
         <option value="$PROJECT_DIR$/Lecture3/o6/o6ex8makeUnique.js" />
@@ -162,6 +134,9 @@
         <option value="$PROJECT_DIR$/Lecture8/msgList.html" />
         <option value="$PROJECT_DIR$/Lecture8/01blocket.js" />
         <option value="$PROJECT_DIR$/Lecture8/msglist.js" />
+        <option value="$PROJECT_DIR$/Lecture9/blocket.html" />
+        <option value="$PROJECT_DIR$/Lecture9/style.css" />
+        <option value="$PROJECT_DIR$/Lecture9/12manupulateDOM.js" />
       </list>
     </option>
   </component>
@@ -189,8 +164,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -201,17 +174,19 @@
             <path>
               <item name="FEND19_JavaScript_1" type="b2602c69:ProjectViewProjectNode" />
               <item name="FEND19_JavaScript_1" type="462c0819:PsiDirectoryNode" />
-              <item name="Lecture7" type="462c0819:PsiDirectoryNode" />
+              <item name="Lecture8" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FEND19_JavaScript_1" type="b2602c69:ProjectViewProjectNode" />
               <item name="FEND19_JavaScript_1" type="462c0819:PsiDirectoryNode" />
-              <item name="Lecture8" type="462c0819:PsiDirectoryNode" />
+              <item name="Lecture9" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -222,7 +197,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="full.screen.before.presentation.mode" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.16.3" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Lecture7" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Lecture9" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -234,18 +209,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Dima\IdeaProjects\FEND19_JavaScript_1\Lecture9" />
+      <recent name="C:\Users\Dima\IdeaProjects\FEND19_JavaScript_1\Lecture7" />
+      <recent name="C:\Users\Dima\IdeaProjects\FEND19_JavaScript_1\Lecture3\o6" />
+      <recent name="C:\Users\Dima\IdeaProjects\FEND19_JavaScript_1\Lecture3" />
+      <recent name="C:\Users\Dima\IdeaProjects\FEND19_JavaScript_1\Lecture2" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Dima\IdeaProjects\FEND19_JavaScript_1\Lecture5\o5_html" />
       <recent name="C:\Users\Dima\IdeaProjects\FEND19_JavaScript_1\Lecture3" />
       <recent name="C:\Users\Dima\IdeaProjects\FEND19_JavaScript_1\Lecture2" />
       <recent name="C:\Users\Dima\IdeaProjects\FEND19_JavaScript_1\Lecture1\o1" />
       <recent name="C:\Users\Dima\IdeaProjects\FEND19_JavaScript_1\Lecture1\o3" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Dima\IdeaProjects\FEND19_JavaScript_1\Lecture7" />
-      <recent name="C:\Users\Dima\IdeaProjects\FEND19_JavaScript_1\Lecture3\o6" />
-      <recent name="C:\Users\Dima\IdeaProjects\FEND19_JavaScript_1\Lecture3" />
-      <recent name="C:\Users\Dima\IdeaProjects\FEND19_JavaScript_1\Lecture2" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -260,11 +236,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.msgList.html">
-    <configuration name="blocket.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/FEND19_JavaScript_1/FEND19_JS1/Lecture8/blocket.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript Debug.blocket.html (1)">
+    <configuration name="blocket.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/FEND19_JavaScript_1/FEND19_JS1/Lecture9/blocket.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/FEND19_JavaScript_1/FEND19_JS1/Lecture6/index.html" useBuiltInWebServerPort="true">
+    <configuration name="blocket.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/FEND19_JavaScript_1/FEND19_JS1/Lecture8/blocket.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="index.html (2)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/FEND19_JavaScript_1/FEND19_JS1/Lecture7/index.html" useBuiltInWebServerPort="true">
@@ -273,16 +249,16 @@
     <configuration name="msgList.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/FEND19_JavaScript_1/FEND19_JS1/Lecture8/msgList.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="o10ex.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="o10ex.js" working-dir="$PROJECT_DIR$/Lecture7">
+    <configuration name="12manupulateDOM.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="12manupulateDOM.js" working-dir="$PROJECT_DIR$/Lecture9">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.blocket.html (1)" />
+        <item itemvalue="Node.js.12manupulateDOM.js" />
         <item itemvalue="JavaScript Debug.msgList.html" />
         <item itemvalue="JavaScript Debug.blocket.html" />
         <item itemvalue="JavaScript Debug.index.html (2)" />
-        <item itemvalue="Node.js.o10ex.js" />
-        <item itemvalue="JavaScript Debug.index.html (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -328,6 +304,7 @@
       <workItem from="1570604649698" duration="14637000" />
       <workItem from="1570626147310" duration="3620000" />
       <workItem from="1570658882145" duration="1671000" />
+      <workItem from="1570690967025" duration="8382000" />
     </task>
     <task id="LOCAL-00001" summary="removed idea folder">
       <created>1569429375009</created>
@@ -434,11 +411,18 @@
       <option name="project" value="LOCAL" />
       <updated>1570534796978</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="solved exercises for lecture 8">
+      <created>1570691030651</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1570691030651</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144800000" />
+    <option name="totallyTimeSpent" value="153182000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -453,7 +437,7 @@
     <frame x="0" y="0" width="1600" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4954955" visible="true" weight="0.11246786" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4954955" visible="true" weight="0.26285347" />
       <window_info id="Structure" order="1" sideWeight="0.5045045" side_tool="true" weight="0.16323908" />
       <window_info id="npm" order="2" sideWeight="0.5024155" side_tool="true" weight="0.19344473" />
       <window_info id="Image Layers" order="3" />
@@ -463,15 +447,15 @@
       <window_info id="Favorites" order="7" sideWeight="0.5045045" side_tool="true" weight="0.16323908" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.25093168" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.39875776" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.44347826" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32974428" />
+      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.32919255" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3204969" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49851853" visible="true" weight="0.15652174" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49851853" weight="0.24099378" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5014815" side_tool="true" weight="0.5511222" />
       <window_info active="true" anchor="bottom" id="SVN Repositories" order="12" weight="0.32971016" />
       <window_info active="true" anchor="bottom" id="Messages" order="13" visible="true" weight="0.31020942" />
@@ -539,30 +523,10 @@
     <MESSAGE value="solved lecture 7 exercises" />
     <MESSAGE value="added correct solution to exercise 3" />
     <MESSAGE value="refactored solution for exercise 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored solution for exercise 3" />
+    <MESSAGE value="solved exercises for lecture 8" />
+    <option name="LAST_COMMIT_MESSAGE" value="solved exercises for lecture 8" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Lecture3/o6arrays/o6ex9sumrow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lecture3/o6arrays/o6ex2getLast.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" selection-start-line="6" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lecture3/o6arrays/o6ex1getFirst.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" selection-start-line="6" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lecture3/o6arrays/o6ex4max.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -782,23 +746,26 @@
     <entry file="file://$PROJECT_DIR$/Lecture2/o3/o3ex7.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lecture3/o6arrays/o6ex5sum.js">
+    <entry file="file://$PROJECT_DIR$/Lecture8/msgList.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="9" selection-start-line="9" selection-end-line="11" selection-end-column="10" />
+          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lecture7/o10ex.js">
+    <entry file="file://$PROJECT_DIR$/Lecture8/msglist.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5400">
-          <caret line="300" column="2" selection-start-line="300" selection-end-line="300" selection-end-column="2" />
+        <state relative-caret-position="307">
+          <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lecture8/blocket.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
+        <state relative-caret-position="527">
           <caret line="32" column="115" selection-start-line="32" selection-start-column="115" selection-end-line="32" selection-end-column="115" />
           <folding>
             <element signature="e#928#933#0" expanded="true" />
@@ -806,27 +773,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Lecture7/o10ex.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="300" column="2" selection-start-line="300" selection-end-line="300" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lecture3/o6arrays/o6ex5sum.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" selection-start-line="9" selection-end-line="11" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Lecture8/01blocket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
+        <state relative-caret-position="527">
           <caret line="80" column="22" selection-start-line="79" selection-end-line="80" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lecture8/msgList.html">
+    <entry file="file://$PROJECT_DIR$/Lecture9/blocket.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" selection-start-line="8" selection-end-line="27" />
+        <state relative-caret-position="108">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lecture8/msglist.js">
+    <entry file="file://$PROJECT_DIR$/Lecture9/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="-88">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lecture9/12manupulateDOM.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
         </state>
       </provider>
     </entry>
