@@ -1,0 +1,13 @@
+html {
+    font-size: larger;
+}
+
+.on {
+    color: whitesmoke;
+    background: red;
+}
+
+.off {
+    color: black;
+    background: whitesmoke;
+}

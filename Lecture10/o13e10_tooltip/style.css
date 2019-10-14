@@ -1,0 +1,24 @@
+
+
+
+.box {
+    position: relative;
+    border: gray 1px solid;
+    padding: 20px;
+    width: 200px;
+    z-index: 1;
+}
+
+.tooltip {
+    position: absolute;
+    background: gray;
+    color: whitesmoke;
+    top: -15px;
+    right: 1px;
+    z-index: 2;
+    padding: 5px;
+}
+
+.hidden {
+    display: none;
+}
