@@ -20,7 +20,6 @@ Krav för godkänt:
 Du kan skapa spelbrädet som du vill, antingen genom att skriva HTML, eller skapa elementen med Javascript.
 Ditt program skall hålla reda på vems tur det är, och hur många drag som har gjorts sammanlagt.
 Detta skall visas i varsitt textfält (<p>-tagg).
-Ditt spel behöver inte hålla reda på om spelet är slut, eller vem som har vunnit. Det får spelarna själva göra.
 Du kan använda bokstäverna O och X som märken för kryss och cirkel.
 Du ska ha använt minst 4 CSS-klasser när du har stylat spelet. Varje klass måste innehålla minst en deklaration.
 
