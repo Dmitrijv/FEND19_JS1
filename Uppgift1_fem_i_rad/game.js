@@ -152,24 +152,23 @@ function clickCell(event) {
         winConditionMet = hasPlayerWon(clickedCell, player2Cells);
     }
 
-    // congratulate winner and clear board
+    // if someone won congratulate winner and clear board
     if (winConditionMet === true){
         if (activePlayer === 1)
             alert("Red wins !!!");
         else
             alert("Blue wins !!!");
+
         clearPlayerCells(player1Cells);
         player1Cells.length = 0;
         clearPlayerCells(player2Cells);
         player2Cells.length = 0;
-        activePlayer = 1;
-    // change active player
-    } else {
-        if (activePlayer === 1)
-            activePlayer = 2;
-        else
-            activePlayer = 1;
     }
+
+    if (activePlayer === 1)
+        activePlayer = 2;
+    else
+        activePlayer = 1;
 
     updateTurnLabel(activePlayer);
     updateMovesMadeLabel(player1Cells.length + player2Cells.length);
