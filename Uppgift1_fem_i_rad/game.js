@@ -38,7 +38,6 @@ Om någon av spelarna har vunnit skall detta presenteras i ett eget textfält, o
 
  */
 
-
 const BOARD_HEIGHT = 18;
 const BOARD_WIDTH = 18;
 
@@ -57,9 +56,8 @@ function clearPlayerCells(cells) {
     }
 }
 
-// label for moves made
-const movesMadeLabel = document.createElement("span");
-movesMadeLabel.setAttribute("id", "moves-made");
+
+const movesMadeLabel = document.querySelector("#moves-made");
 function updateMovesMadeLabel(movesMade) {
     if(movesMade === 0)
         movesMadeLabel.textContent = "Five In A Row";
@@ -70,42 +68,34 @@ function updateMovesMadeLabel(movesMade) {
 }
 updateMovesMadeLabel(player1Cells.length + player2Cells.length);
 
-// labels for whos turn it is
-const p1TurnSpan = document.createElement("span");
-p1TurnSpan.setAttribute("id", "player1Turn");
-p1TurnSpan.classList.add("player1Status", "hidden");
 
-const p2TurnSpan = document.createElement("span");
-p2TurnSpan.setAttribute("id", "player2Turn");
-p2TurnSpan.classList.add("player2Status", "hidden");
 
+const p1TurnSpan = document.querySelector("#player1Turn");
+p1TurnSpan.classList.add("player1Status", "inactive");
 p1TurnSpan.innerText = "Reds turn";
+
+const p2TurnSpan = document.querySelector("#player2Turn");
+p2TurnSpan.classList.add("player2Status", "inactive");
 p2TurnSpan.innerText = "Blues turn";
 
 function updateTurnLabel(activePlayer) {
     if (activePlayer === 1){
-        p1TurnSpan.classList.remove("hidden");
-        p2TurnSpan.classList.add("hidden");
+        p1TurnSpan.classList.remove("inactive");
+        p2TurnSpan.classList.add("inactive");
     } else if (activePlayer === 2) {
-        p1TurnSpan.classList.add("hidden");
-        p2TurnSpan.classList.remove("hidden");
+        p1TurnSpan.classList.add("inactive");
+        p2TurnSpan.classList.remove("inactive");
     }
 }
 updateTurnLabel(activePlayer);
 
-const table = document.createElement("table");
-table.classList.add("gametable");
 
-const tableHeadRow = document.createElement("tr");
-const gameInfoCell = document.createElement("th");
-gameInfoCell.appendChild(p1TurnSpan);
-gameInfoCell. appendChild(movesMadeLabel);
+
+const table = document.querySelector("#game-table");
+const tbody = document.createElement("tbody");
+
+const gameInfoCell = document.querySelector("table thead tr th");
 gameInfoCell.setAttribute("colspan", BOARD_WIDTH+"");
-gameInfoCell.appendChild(p2TurnSpan);
-
-tableHeadRow.appendChild(gameInfoCell);
-
-table.appendChild(tableHeadRow);
 
 for (let y = 1; y <= BOARD_HEIGHT; y++) {
     const tableRow = document.createElement("tr");
@@ -117,10 +107,9 @@ for (let y = 1; y <= BOARD_HEIGHT; y++) {
         tableCell.addEventListener('mouseleave', mouseLeaveCell);
         tableRow.appendChild(tableCell);
     }
-    table.appendChild(tableRow);
+    tbody.appendChild(tableRow);
 }
-
-document.querySelector("#table-anchor").appendChild(table);
+table.appendChild(tbody);
 
 
 
@@ -135,7 +124,7 @@ function mouseLeaveCell(event) {
 
 function clickCell(event) {
 
-    // this cell is already owned by a player
+    // if this cell is already owned by a player do nothing
     if ( (this.classList.contains("ownedByPlayer1")) || this.classList.contains("ownedByPlayer2") )
         return;
 
@@ -148,7 +137,6 @@ function clickCell(event) {
     };
 
     let winConditionMet = false;
-
     // add ownership of cell based on which player clicked
     if (activePlayer === 1){
         this.textContent = "O";
