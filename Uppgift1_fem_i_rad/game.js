@@ -39,39 +39,84 @@ Om någon av spelarna har vunnit skall detta presenteras i ett eget textfält, o
  */
 
 
-const BOARD_HEIGHT = 25;
-const BOARD_WIDTH = 25;
+const BOARD_HEIGHT = 18;
+const BOARD_WIDTH = 18;
 
+const WINNING_LINE_LENGTH = 5;
 
 let activePlayer = 1;
-let movesMade = 0;
 
-const playerOneSquares = [];
-const playerTwoSquares = [];
+const player1Cells = [];
+const player2Cells = [];
 
-document.querySelector("#moves-made").textContent = movesMade+" moves made.";
+function clearPlayerCells(cells) {
+    for (let i = 0; i < cells.length; i++) {
+        const cell = document.querySelector("#cell-"+cells[i].x+"-"+cells[i].y);
+        cell.classList.remove("ownedByPlayer1", "ownedByPlayer2");
+        cell.textContent = "";
+    }
+}
+
+// label for moves made
+const movesMadeLabel = document.createElement("span");
+movesMadeLabel.setAttribute("id", "moves-made");
+function updateMovesMadeLabel(movesMade) {
+    if(movesMade === 0)
+        movesMadeLabel.textContent = "Five In A Row";
+    else if (movesMade === 1)
+        movesMadeLabel.textContent = movesMade+" move made";
+    else
+        movesMadeLabel.textContent = movesMade+" moves made";
+}
+updateMovesMadeLabel(player1Cells.length + player2Cells.length);
+
+// labels for whos turn it is
+const p1TurnSpan = document.createElement("span");
+p1TurnSpan.setAttribute("id", "player1Turn");
+p1TurnSpan.classList.add("player1Status", "hidden");
+
+const p2TurnSpan = document.createElement("span");
+p2TurnSpan.setAttribute("id", "player2Turn");
+p2TurnSpan.classList.add("player2Status", "hidden");
+
+p1TurnSpan.innerText = "Reds turn";
+p2TurnSpan.innerText = "Blues turn";
+
+function updateTurnLabel(activePlayer) {
+    if (activePlayer === 1){
+        p1TurnSpan.classList.remove("hidden");
+        p2TurnSpan.classList.add("hidden");
+    } else if (activePlayer === 2) {
+        p1TurnSpan.classList.add("hidden");
+        p2TurnSpan.classList.remove("hidden");
+    }
+}
+updateTurnLabel(activePlayer);
 
 const table = document.createElement("table");
 table.classList.add("gametable");
 
-const title = document.querySelector("#game-title");
-//title.classList.add("ownedByPlayer1");
+const tableHeadRow = document.createElement("tr");
+const gameInfoCell = document.createElement("th");
+gameInfoCell.appendChild(p1TurnSpan);
+gameInfoCell. appendChild(movesMadeLabel);
+gameInfoCell.setAttribute("colspan", BOARD_WIDTH+"");
+gameInfoCell.appendChild(p2TurnSpan);
 
-//const tableHeadRow = document.createElement("tr");
-//const tableHead = document.createElement("th");
+tableHeadRow.appendChild(gameInfoCell);
 
-for (let y = 1; y < BOARD_HEIGHT; y++) {
+table.appendChild(tableHeadRow);
 
+for (let y = 1; y <= BOARD_HEIGHT; y++) {
     const tableRow = document.createElement("tr");
-
-    for (let x = 1; x < BOARD_WIDTH; x++) {
+    for (let x = 1; x <= BOARD_WIDTH; x++) {
         const tableCell = document.createElement("td");
         tableCell.setAttribute("id", "cell-"+x+"-"+y);
         tableCell.addEventListener('click', clickCell);
-        //tableCell.textContent = "-";
+        tableCell.addEventListener('mouseenter', mouseEnterCell);
+        tableCell.addEventListener('mouseleave', mouseLeaveCell);
         tableRow.appendChild(tableCell);
     }
-
     table.appendChild(tableRow);
 }
 
@@ -79,48 +124,59 @@ document.querySelector("#table-anchor").appendChild(table);
 
 
 
+function mouseEnterCell(event) {
+    if (!(this.classList.contains("ownedByPlayer1") || this.classList.contains("ownedByPlayer2")))
+        this.classList.add("player"+activePlayer+"Mouseover");
+}
+
+function mouseLeaveCell(event) {
+    this.classList.remove("player1Mouseover", "player2Mouseover");
+}
+
 function clickCell(event) {
 
     // this cell is already owned by a player
     if ( (this.classList.contains("ownedByPlayer1")) || this.classList.contains("ownedByPlayer2") )
         return;
 
+    this.classList.remove("player1Mouseover", "player2Mouseover");
+
     const coordinateNumbers = this.getAttribute("id").match(/\d+/g);
-    const clickedCellCoords = {
+    const clickedCell = {
         x: Number(coordinateNumbers[0]),
         y: Number(coordinateNumbers[1]),
     };
 
+    let winConditionMet = false;
+
     // add ownership of cell based on which player clicked
     if (activePlayer === 1){
-        
         this.textContent = "O";
         this.classList.add("ownedByPlayer1");
-        //title.classList.replace("ownedByPlayer1", "ownedByPlayer2");
-        playerOneSquares.push(clickedCellCoords);
-
-        if ((hasPlayerWon(clickedCellCoords, playerOneSquares)) === true )
-            alert("RED WINS!!!!");
-
+        player1Cells.push(clickedCell);
+        if ((hasPlayerWon(clickedCell, player1Cells)) === true )
+            winConditionMet = confirm("RED WINS!!!!");
         activePlayer = 2;
-
     } else {
-
         this.textContent = "X";
         this.classList.add("ownedByPlayer2");
-        //title.classList.replace("ownedByPlayer2", "ownedByPlayer1");
-        playerTwoSquares.push(clickedCellCoords);
+        player2Cells.push(clickedCell);
 
-        if ((hasPlayerWon(clickedCellCoords, playerTwoSquares)) === true )
-            alert("BLUE WINS!!!!");
-
+        if ((hasPlayerWon(clickedCell, player2Cells)) === true )
+            winConditionMet = confirm("BLUE WINS!!!!");
         activePlayer = 1;
-
     }
 
-    // update move counter
-    movesMade++;
-    document.querySelector("#moves-made").textContent = movesMade+" moves made.";
+    if (winConditionMet){
+        clearPlayerCells(player1Cells);
+        player1Cells.length = 0;
+        clearPlayerCells(player2Cells);
+        player2Cells.length = 0;
+        activePlayer = 1;
+    }
+
+    updateMovesMadeLabel(player1Cells.length + player2Cells.length);
+    updateTurnLabel(activePlayer);
 
 }
 
@@ -128,211 +184,89 @@ function clickCell(event) {
 
 function hasPlayerWon(clickedCell, ownedCells) {
 
-    if ((getHorizontalNeighbors(clickedCell) >= 4) )
+    if (countHorizontalNeighbors(clickedCell) >= WINNING_LINE_LENGTH-1)
         return true;
 
-    if (getVerticalNeighbors(clickedCell) >= 4)
+    if (countVerticalNeighbors(clickedCell) >= WINNING_LINE_LENGTH-1)
         return true;
 
-    if (getRightDiagonalNeighbors(clickedCell) >= 4)
+    if (countRightDiagonalNeighbors(clickedCell) >= WINNING_LINE_LENGTH-1)
         return true;
 
-    if (getLeftDiagonalNeighbors(clickedCell) >= 4)
+    if (countLeftDiagonalNeighbors(clickedCell) >= WINNING_LINE_LENGTH-1)
         return true;
 
     return false;
 
-    function getVerticalNeighbors(clickedCell) {
 
-        let neigbors = 0;
-        const pointerCell = {x: clickedCell.x, y: clickedCell.y};
-
-        // check above
-        while (pointerCell.y > 1){
-            const northNeighbor = hasNeighborNorth(pointerCell);
-            if (northNeighbor){
-                neigbors++;
-                pointerCell.x = northNeighbor.x;
-                pointerCell.y = northNeighbor.y;
-            } else {
-                break;
-            }
-        }
-
-        // reset pointer
-        pointerCell.x = clickedCell.x;
-        pointerCell.y = clickedCell.y;
-
-        // check below
-        while (pointerCell.y < BOARD_HEIGHT){
-            const southNeighbor = hasNeighborSouth(pointerCell);
-            if (southNeighbor){
-                neigbors++;
-                pointerCell.x = southNeighbor.x;
-                pointerCell.y = southNeighbor.y;
-            } else {
-                break;
-            }
-        }
-
-        return neigbors;
-
+    function countVerticalNeighbors(clickedCell) {
+        return consecutiveCells(clickedCell, getNeighbourNorth) + consecutiveCells(clickedCell, getNeighbourSouth);
     }
 
-    function getHorizontalNeighbors(clickedCell) {
-
-        let neigbors = 0;
-        const pointerCell = {x: clickedCell.x, y: clickedCell.y};
-
-        // check to the left
-        while (pointerCell.x > 1){
-            const westNeighbor = hasNeighborWest(pointerCell);
-            if (westNeighbor){
-                neigbors++;
-                pointerCell.x = westNeighbor.x;
-                pointerCell.y = westNeighbor.y;
-            } else {
-                break;
-            }
-        }
-
-        // reset pointer
-        pointerCell.x = clickedCell.x;
-        pointerCell.y = clickedCell.y;
-
-        // check to the right
-        while (pointerCell.x < BOARD_WIDTH){
-            const eastNeighbor = hasNeighborEast(pointerCell);
-            if (eastNeighbor){
-                neigbors++;
-                pointerCell.x = eastNeighbor.x;
-                pointerCell.y = eastNeighbor.y;
-            } else {
-                break;
-            }
-        }
-
-        return neigbors;
-
+    function countHorizontalNeighbors(clickedCell) {
+        return consecutiveCells(clickedCell, getNeighbourWest) + consecutiveCells(clickedCell, getNeighbourEast);
     }
     
-    function getRightDiagonalNeighbors() {
-
-        let neigbors = 0;
-        const pointerCell = {x: clickedCell.x, y: clickedCell.y};
-
-        // check up right
-        while (pointerCell.x > 1){
-            const northEastNeighbour = hasNeighborNorthEast(pointerCell);
-            if (northEastNeighbour){
-                neigbors++;
-                pointerCell.x = northEastNeighbour.x;
-                pointerCell.y = northEastNeighbour.y;
-            } else {
-                break;
-            }
-        }
-
-        // reset pointer
-        pointerCell.x = clickedCell.x;
-        pointerCell.y = clickedCell.y;
-
-        // check down left
-        while (pointerCell.x > 1){
-            const southWestNeighbour = hasNeighborSouthWest(pointerCell);
-            if (southWestNeighbour){
-                neigbors++;
-                pointerCell.x = southWestNeighbour.x;
-                pointerCell.y = southWestNeighbour.y;
-            } else {
-                break;
-            }
-        }
-
-        return neigbors;
-
+    function countRightDiagonalNeighbors(clickedCell) {
+        return consecutiveCells(clickedCell, getNeighbourNorthEast) + consecutiveCells(clickedCell, getNeighbourSouthWest);
     }
 
-    function getLeftDiagonalNeighbors() {
+    function countLeftDiagonalNeighbors(clickedCell) {
+        return consecutiveCells(clickedCell, getNeighbourNorthWest) + consecutiveCells(clickedCell, getNeighbourSouthEast);
+    }
 
+
+    function consecutiveCells(clickedCell, neighbourDirectionCheck) {
         let neigbors = 0;
         const pointerCell = {x: clickedCell.x, y: clickedCell.y};
-
-        // check up left
-        while (pointerCell.x > 1){
-            const northWestNeighbour = hasNeighborNorthWest(pointerCell);
-            if (northWestNeighbour){
+        const longestDistance = (BOARD_WIDTH > BOARD_HEIGHT) ? BOARD_WIDTH : BOARD_HEIGHT;
+        while (neigbors < longestDistance){
+            const neighbourCell = neighbourDirectionCheck(pointerCell);
+            if (neighbourCell){
                 neigbors++;
-                pointerCell.x = northWestNeighbour.x;
-                pointerCell.y = northWestNeighbour.y;
+                pointerCell.x = neighbourCell.x;
+                pointerCell.y = neighbourCell.y;
             } else {
                 break;
             }
         }
-
-        // reset pointer
-        pointerCell.x = clickedCell.x;
-        pointerCell.y = clickedCell.y;
-
-        // check down right
-        while (pointerCell.x < BOARD_HEIGHT){
-            const southEastNeighbour = hasNeighborSouthEast(pointerCell);
-            if (southEastNeighbour){
-                neigbors++;
-                pointerCell.x = southEastNeighbour.x;
-                pointerCell.y = southEastNeighbour.y;
-            } else {
-                break;
-            }
-        }
-
         return neigbors;
-
     }
 
     
-    function hasNeighborNorth(cell) {
-        return ownedCells.find(function(neighbor) {
-            return (neighbor.y-1) === cell.y && neighbor.x === cell.x;
-        });
+    function getNeighbourNorth(cell) {
+        return ownedCells.find(( neighbor ) => neighbor.y-1 === cell.y && neighbor.x === cell.x);
     }
 
-    function hasNeighborNorthEast(cell) {
-        return ownedCells.find(function(neighbor) {
-            return neighbor.y-1 === cell.y && (neighbor.x+1) === cell.x;
-        });
+    function getNeighbourNorthEast(cell) {
+        return ownedCells.find(( neighbor ) => neighbor.y-1 === cell.y && neighbor.x+1 === cell.x);
     }
 
-    function hasNeighborEast(cell) {
+    function getNeighbourEast(cell) {
         return ownedCells.find(( neighbor ) => neighbor.y === cell.y && (neighbor.x-1) === cell.x);
     }
 
-    function hasNeighborSouthEast(cell) {
+    function getNeighbourSouthEast(cell) {
         return ownedCells.find(( neighbor ) => neighbor.y+1 === cell.y && (neighbor.x+1) === cell.x);
     }
 
-    function hasNeighborSouth(cell) {
-        return ownedCells.find(( neighbor ) => (neighbor.y+1) === cell.y && neighbor.x === cell.x);
+    function getNeighbourSouth(cell) {
+        return ownedCells.find(( neighbor ) => neighbor.y+1 === cell.y && neighbor.x === cell.x);
     }
 
-    function hasNeighborSouthWest(cell) {
-        return ownedCells.find(( neighbor ) => (neighbor.y+1) === cell.y && (neighbor.x-1) === cell.x);
+    function getNeighbourSouthWest(cell) {
+        return ownedCells.find(( neighbor ) => neighbor.y+1 === cell.y && neighbor.x-1 === cell.x);
     }
 
-    function hasNeighborWest(cell) {
-        return ownedCells.find(function(target) {
-            return (target.y === cell.y) && ((target.x+1) === cell.x);
-        });
+    function getNeighbourWest(cell) {
+        return ownedCells.find(( neighbor ) => neighbor.y === cell.y && ((neighbor.x+1) === cell.x));
     }
 
-    function hasNeighborNorthWest(cell) {
-        return ownedCells.find(function(neighbor) {
-            return (neighbor.y-1) === cell.y && (neighbor.x-1) === cell.x;
-        });
+    function getNeighbourNorthWest(cell) {
+        return ownedCells.find(( neighbor ) => neighbor.y-1 === cell.y && neighbor.x-1 === cell.x);
     }
 
 }
-
 
 
 
