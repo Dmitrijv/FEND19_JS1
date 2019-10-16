@@ -4,8 +4,6 @@
     <list default="true" id="d4cd2a4e-3f78-4312-8383-ff087efccebd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Uppgift1_fem_i_rad/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/Uppgift1_fem_i_rad/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Uppgift1_fem_i_rad/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Uppgift1_fem_i_rad/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Uppgift1_fem_i_rad/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Uppgift1_fem_i_rad/style.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,34 +25,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Uppgift1_fem_i_rad/game.js">
+        <entry file="file://$PROJECT_DIR$/Uppgift1_fem_i_rad/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lecture10/o13e3_mouseover/events.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="28" column="35" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="35" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="486">
+              <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Uppgift1_fem_i_rad/index.html">
+        <entry file="file://$PROJECT_DIR$/Uppgift1_fem_i_rad/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+            <state relative-caret-position="389">
+              <caret line="99" column="21" selection-start-line="99" selection-start-column="21" selection-end-line="99" selection-end-column="21" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Uppgift1_fem_i_rad/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1494">
-              <caret line="83" column="32" lean-forward="true" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
+            <state relative-caret-position="403">
+              <caret line="112" column="4" selection-start-line="112" selection-start-column="1" selection-end-line="112" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -137,16 +123,16 @@
         <option value="$PROJECT_DIR$/Lecture10/o13e9_list/index.html" />
         <option value="$PROJECT_DIR$/Lecture10/o13e9_list/events.js" />
         <option value="$PROJECT_DIR$/Lecture10/o13e10_tooltip/index.html" />
-        <option value="$PROJECT_DIR$/Lecture10/o13e10_tooltip/style.css" />
         <option value="$PROJECT_DIR$/Lecture10/o13e10_tooltip/events.js" />
         <option value="$PROJECT_DIR$/Lecture10/o13e11_drag/index.html" />
         <option value="$PROJECT_DIR$/Lecture10/o13e11_drag/events.js" />
         <option value="$PROJECT_DIR$/Lecture10/o13e11_drag/style.css" />
         <option value="$PROJECT_DIR$/Lecture10/o13e12_snake/style.css" />
         <option value="$PROJECT_DIR$/Lecture10/o13e12_snake/events.js" />
-        <option value="$PROJECT_DIR$/Uppgift1_fem_i_rad/game.js" />
-        <option value="$PROJECT_DIR$/Uppgift1_fem_i_rad/style.css" />
         <option value="$PROJECT_DIR$/Uppgift1_fem_i_rad/index.html" />
+        <option value="$PROJECT_DIR$/Lecture10/o13e10_tooltip/style.css" />
+        <option value="$PROJECT_DIR$/Uppgift1_fem_i_rad/style.css" />
+        <option value="$PROJECT_DIR$/Uppgift1_fem_i_rad/game.js" />
       </list>
     </option>
   </component>
@@ -331,7 +317,7 @@
       <workItem from="1571123188791" duration="9852000" />
       <workItem from="1571134357155" duration="4609000" />
       <workItem from="1571148104262" duration="4164000" />
-      <workItem from="1571215514402" duration="22129000" />
+      <workItem from="1571215514402" duration="25106000" />
     </task>
     <task id="LOCAL-00001" summary="removed idea folder">
       <created>1569429375009</created>
@@ -473,11 +459,25 @@
       <option name="project" value="LOCAL" />
       <updated>1571151649175</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="five in a row working version">
+      <created>1571241447466</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1571241447466</updated>
+    </task>
+    <task id="LOCAL-00022" summary="fewer elements are generated with js">
+      <created>1571243508774</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1571243508775</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212815000" />
+    <option name="totallyTimeSpent" value="215792000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -492,7 +492,7 @@
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4954955" visible="true" weight="0.1799787" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4954955" visible="true" weight="0.1799787" />
       <window_info id="Structure" order="1" sideWeight="0.5045045" side_tool="true" weight="0.16323908" />
       <window_info id="npm" order="2" sideWeight="0.5024155" side_tool="true" weight="0.19344473" />
       <window_info id="Image Layers" order="3" />
@@ -501,7 +501,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info id="Favorites" order="7" sideWeight="0.5045045" side_tool="true" weight="0.16323908" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.25093168" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.25024247" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.16024844" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -513,7 +513,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49851853" weight="0.24099378" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5014815" side_tool="true" weight="0.5511222" />
       <window_info active="true" anchor="bottom" id="SVN Repositories" order="12" weight="0.32971016" />
-      <window_info anchor="bottom" id="Messages" order="13" visible="true" weight="0.31944445" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.31944445" />
       <window_info anchor="bottom" id="LuaCheck" order="14" />
       <window_info active="true" anchor="bottom" id="GitHub Pull Requests" order="15" weight="0.32937366" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -584,7 +584,9 @@
     <MESSAGE value="pull_left class will be added to correct tag" />
     <MESSAGE value="solved lecture 10 exercises" />
     <MESSAGE value="five in a row initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="five in a row initial commit" />
+    <MESSAGE value="five in a row working version" />
+    <MESSAGE value="fewer elements are generated with js" />
+    <option name="LAST_COMMIT_MESSAGE" value="fewer elements are generated with js" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Lecture2/o3/o3ex7.js">
@@ -754,13 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="25" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lecture10/o13e10_tooltip/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -950,27 +945,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Uppgift1_fem_i_rad/game.js">
+    <entry file="file://$PROJECT_DIR$/Uppgift1_fem_i_rad/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="486">
+          <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lecture10/o13e10_tooltip/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-end-line="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Uppgift1_fem_i_rad/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1494">
-          <caret line="83" column="32" lean-forward="true" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
+        <state relative-caret-position="403">
+          <caret line="112" column="4" selection-start-line="112" selection-start-column="1" selection-end-line="112" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Uppgift1_fem_i_rad/index.html">
+    <entry file="file://$PROJECT_DIR$/Uppgift1_fem_i_rad/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        <state relative-caret-position="389">
+          <caret line="99" column="21" selection-start-line="99" selection-start-column="21" selection-end-line="99" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -97,6 +97,7 @@ const tbody = document.createElement("tbody");
 const gameInfoCell = document.querySelector("table thead tr th");
 gameInfoCell.setAttribute("colspan", BOARD_WIDTH+"");
 
+// create table cells
 for (let y = 1; y <= BOARD_HEIGHT; y++) {
     const tableRow = document.createElement("tr");
     for (let x = 1; x <= BOARD_WIDTH; x++) {
@@ -137,34 +138,41 @@ function clickCell(event) {
     };
 
     let winConditionMet = false;
+
     // add ownership of cell based on which player clicked
     if (activePlayer === 1){
         this.textContent = "O";
         this.classList.add("ownedByPlayer1");
         player1Cells.push(clickedCell);
-        if ((hasPlayerWon(clickedCell, player1Cells)) === true )
-            winConditionMet = confirm("RED WINS!!!!");
-        activePlayer = 2;
+        winConditionMet = hasPlayerWon(clickedCell, player1Cells);
     } else {
         this.textContent = "X";
         this.classList.add("ownedByPlayer2");
         player2Cells.push(clickedCell);
-
-        if ((hasPlayerWon(clickedCell, player2Cells)) === true )
-            winConditionMet = confirm("BLUE WINS!!!!");
-        activePlayer = 1;
+        winConditionMet = hasPlayerWon(clickedCell, player2Cells);
     }
 
-    if (winConditionMet){
+    // congratulate winner and clear board
+    if (winConditionMet === true){
+        if (activePlayer === 1)
+            alert("Red wins !!!");
+        else
+            alert("Blue wins !!!");
         clearPlayerCells(player1Cells);
         player1Cells.length = 0;
         clearPlayerCells(player2Cells);
         player2Cells.length = 0;
         activePlayer = 1;
+    // change active player
+    } else {
+        if (activePlayer === 1)
+            activePlayer = 2;
+        else
+            activePlayer = 1;
     }
 
-    updateMovesMadeLabel(player1Cells.length + player2Cells.length);
     updateTurnLabel(activePlayer);
+    updateMovesMadeLabel(player1Cells.length + player2Cells.length);
 
 }
 
