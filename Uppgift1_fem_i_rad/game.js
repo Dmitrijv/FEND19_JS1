@@ -38,13 +38,11 @@ Om någon av spelarna har vunnit skall detta presenteras i ett eget textfält, o
 
  */
 
-const BOARD_HEIGHT = 25;
-const BOARD_WIDTH = 25;
-
+const BOARD_HEIGHT = 20;
+const BOARD_WIDTH = 20;
 const WINNING_LINE_LENGTH = 5;
 
 let activePlayer = 1;
-
 const player1Cells = [];
 const player2Cells = [];
 
@@ -60,7 +58,8 @@ function clearPlayerCells(cells) {
 const movesMadeLabel = document.querySelector("#moves-made");
 function updateMovesMadeLabel(movesMade) {
     if(movesMade === 0)
-        movesMadeLabel.textContent = "Five In A Row "+BOARD_HEIGHT+"x"+BOARD_WIDTH;
+        movesMadeLabel.textContent = "Five In A Row";
+        //movesMadeLabel.textContent = "Five In A Row "+BOARD_HEIGHT+"x"+BOARD_WIDTH;
     else if (movesMade === 1)
         movesMadeLabel.textContent = movesMade+" move made";
     else
@@ -154,6 +153,7 @@ function clickCell(event) {
 
     // if someone won congratulate winner and clear board
     if (winConditionMet === true){
+
         if (activePlayer === 1)
             alert("Red wins !!!");
         else
@@ -165,10 +165,7 @@ function clickCell(event) {
         player2Cells.length = 0;
     }
 
-    if (activePlayer === 1)
-        activePlayer = 2;
-    else
-        activePlayer = 1;
+    activePlayer = (activePlayer === 1) ? 2 : 1;
 
     updateTurnLabel(activePlayer);
     updateMovesMadeLabel(player1Cells.length + player2Cells.length);
