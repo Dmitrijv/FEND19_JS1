@@ -62,15 +62,28 @@ html {
 
 .gametable td {
     background: whitesmoke;
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     text-align:center;
-    font-size: 18pt;
+    font-size: 15pt;
     border-width: 1px;
     border-style: solid;
     border-color: white;
 
 }
+
+.gametable .ownedByPlayer1 {
+    background: red;
+    color: white;
+    font-weight: bold;
+}
+
+.gametable td.ownedByPlayer2 {
+    background: dodgerblue;
+    color: white;
+    font-weight: bold;
+}
+
 
 .gametable td.player1Mouseover {
     box-shadow: inset 0 -35px 35px 0 red;
@@ -80,23 +93,11 @@ html {
     box-shadow: inset 0 -35px 35px 0 dodgerblue;
 }
 
-.ownedByPlayer1 {
-    background: red !important;
-    color: white;
-    font-weight: bold;
-}
-
-.ownedByPlayer2 {
-    background: dodgerblue !important;
-    color: white;
-    font-weight: bold;
-}
-
 
 .player1Status {
     text-decoration: underline red solid;
     color: white;
-    text-align: left !important;
+    text-align: left;
     float: left;
     margin-left: 6px;
 }
@@ -104,7 +105,7 @@ html {
 .player2Status {
     text-decoration: underline dodgerblue solid;
     color: white;
-    text-align: right !important;
+    text-align: right;
     float: right;
     margin-right: 6px;
 }

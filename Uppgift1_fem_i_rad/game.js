@@ -38,8 +38,8 @@ Om någon av spelarna har vunnit skall detta presenteras i ett eget textfält, o
 
  */
 
-const BOARD_HEIGHT = 18;
-const BOARD_WIDTH = 18;
+const BOARD_HEIGHT = 25;
+const BOARD_WIDTH = 25;
 
 const WINNING_LINE_LENGTH = 5;
 
@@ -60,7 +60,7 @@ function clearPlayerCells(cells) {
 const movesMadeLabel = document.querySelector("#moves-made");
 function updateMovesMadeLabel(movesMade) {
     if(movesMade === 0)
-        movesMadeLabel.textContent = "Five In A Row";
+        movesMadeLabel.textContent = "Five In A Row "+BOARD_HEIGHT+"x"+BOARD_WIDTH;
     else if (movesMade === 1)
         movesMadeLabel.textContent = movesMade+" move made";
     else
@@ -115,23 +115,23 @@ table.appendChild(tbody);
 
 
 function mouseEnterCell(event) {
-    if (!(this.classList.contains("ownedByPlayer1") || this.classList.contains("ownedByPlayer2")))
-        this.classList.add("player"+activePlayer+"Mouseover");
+    if (!(event.currentTarget.classList.contains("ownedByPlayer1") || event.currentTarget.classList.contains("ownedByPlayer2")))
+        event.currentTarget.classList.add("player"+activePlayer+"Mouseover");
 }
 
 function mouseLeaveCell(event) {
-    this.classList.remove("player1Mouseover", "player2Mouseover");
+    event.currentTarget.classList.remove("player1Mouseover", "player2Mouseover");
 }
 
 function clickCell(event) {
 
     // if this cell is already owned by a player do nothing
-    if ( (this.classList.contains("ownedByPlayer1")) || this.classList.contains("ownedByPlayer2") )
+    if ( (event.currentTarget.classList.contains("ownedByPlayer1")) || event.currentTarget.classList.contains("ownedByPlayer2") )
         return;
 
-    this.classList.remove("player1Mouseover", "player2Mouseover");
+    event.currentTarget.classList.remove("player1Mouseover", "player2Mouseover");
 
-    const coordinateNumbers = this.getAttribute("id").match(/\d+/g);
+    const coordinateNumbers = event.currentTarget.getAttribute("id").match(/\d+/g);
     const clickedCell = {
         x: Number(coordinateNumbers[0]),
         y: Number(coordinateNumbers[1]),
@@ -141,13 +141,13 @@ function clickCell(event) {
 
     // add ownership of cell based on which player clicked
     if (activePlayer === 1){
-        this.textContent = "O";
-        this.classList.add("ownedByPlayer1");
+        event.currentTarget.textContent = "O";
+        event.currentTarget.classList.add("ownedByPlayer1");
         player1Cells.push(clickedCell);
         winConditionMet = hasPlayerWon(clickedCell, player1Cells);
     } else {
-        this.textContent = "X";
-        this.classList.add("ownedByPlayer2");
+        event.currentTarget.textContent = "X";
+        event.currentTarget.classList.add("ownedByPlayer2");
         player2Cells.push(clickedCell);
         winConditionMet = hasPlayerWon(clickedCell, player2Cells);
     }
