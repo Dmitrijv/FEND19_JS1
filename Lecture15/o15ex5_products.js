@@ -106,7 +106,7 @@ function clickMenuButton(event) {
     const beerList = document.createElement("ul");
     selectedBeers.forEach(function(beer) {
         const listItem = document.createElement("li");
-        listItem.textContent = `${beer.name} (${beer.abv}) - ${beer.price}€`;
+        listItem.textContent = `${beer.name} (${beer.abv}%) - ${beer.price}€`;
         beerList.appendChild(listItem);
     });
 
