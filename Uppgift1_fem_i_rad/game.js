@@ -165,6 +165,14 @@ function clickCell(event) {
         player2Cells.length = 0;
     }
 
+    if ((player1Cells.length+player2Cells.length) === (BOARD_WIDTH*BOARD_HEIGHT)){
+        alert("Draw!!!");
+        clearPlayerCells(player1Cells);
+        player1Cells.length = 0;
+        clearPlayerCells(player2Cells);
+        player2Cells.length = 0;
+    }
+
     activePlayer = (activePlayer === 1) ? 2 : 1;
 
     updateTurnLabel(activePlayer);
