@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4cd2a4e-3f78-4312-8383-ff087efccebd" name="Default Changelist" comment="added a function to clear board">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Uppgift1_fem_i_rad/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/Uppgift1_fem_i_rad/game.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -26,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Uppgift1_fem_i_rad/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+            <state relative-caret-position="324">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -35,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Uppgift1_fem_i_rad/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="161" selection-start-line="161" selection-end-line="161" />
+            <state relative-caret-position="306">
+              <caret line="151" column="68" lean-forward="true" selection-start-line="151" selection-start-column="68" selection-end-line="151" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -132,7 +133,6 @@
         <option value="$PROJECT_DIR$/Lecture10/o13e11_drag/style.css" />
         <option value="$PROJECT_DIR$/Lecture10/o13e12_snake/style.css" />
         <option value="$PROJECT_DIR$/Lecture10/o13e12_snake/events.js" />
-        <option value="$PROJECT_DIR$/Uppgift1_fem_i_rad/index.html" />
         <option value="$PROJECT_DIR$/Lecture10/o13e10_tooltip/style.css" />
         <option value="$PROJECT_DIR$/Uppgift1_fem_i_rad/style.css" />
         <option value="$PROJECT_DIR$/Lecture15/o15.js" />
@@ -141,6 +141,7 @@
         <option value="$PROJECT_DIR$/Lecture15/o15ex4_modifyArray.js" />
         <option value="$PROJECT_DIR$/Lecture15/index.html" />
         <option value="$PROJECT_DIR$/Lecture15/o15ex5_products.js" />
+        <option value="$PROJECT_DIR$/Uppgift1_fem_i_rad/index.html" />
         <option value="$PROJECT_DIR$/Uppgift1_fem_i_rad/game.js" />
       </list>
     </option>
@@ -243,7 +244,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html (2)">
+  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
     <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/FEND19_JS1/Uppgift1_fem_i_rad/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -261,9 +262,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html (1)" />
         <item itemvalue="JavaScript Debug.index.html (2)" />
         <item itemvalue="JavaScript Debug.index.html (5)" />
-        <item itemvalue="JavaScript Debug.index.html (1)" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.index.html (4)" />
       </list>
@@ -500,7 +501,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="240709000" />
+    <option name="totallyTimeSpent" value="241368000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -533,7 +534,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3204969" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49851853" visible="true" weight="0.43743938" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49851853" visible="true" weight="0.39476237" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5014815" side_tool="true" weight="0.5511222" />
       <window_info active="true" anchor="bottom" id="SVN Repositories" order="12" weight="0.32971016" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.31944445" />
@@ -822,13 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Uppgift1_fem_i_rad/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lecture10/o13e2_content/events.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -960,10 +954,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Uppgift1_fem_i_rad/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Uppgift1_fem_i_rad/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="161" selection-start-line="161" selection-end-line="161" />
+        <state relative-caret-position="306">
+          <caret line="151" column="68" lean-forward="true" selection-start-line="151" selection-start-column="68" selection-end-line="151" selection-end-column="68" />
         </state>
       </provider>
     </entry>

@@ -42,6 +42,18 @@ const BOARD_HEIGHT = 20;
 const BOARD_WIDTH = 20;
 const WINNING_LINE_LENGTH = 5;
 
+const PLAYER_INFO = {
+    1:{
+        name: "RED",
+        marker: "X",
+    },
+    2:{
+        name: "BLUE",
+        marker: "O"
+    },
+};
+
+
 let activePlayer = 1;
 const player1Cells = [];
 const player2Cells = [];
@@ -136,6 +148,9 @@ function clickCell(event) {
 
     event.currentTarget.classList.remove("player1Mouseover", "player2Mouseover");
 
+    event.currentTarget.textContent = PLAYER_INFO[activePlayer]['marker'];
+    event.currentTarget.classList.add("ownedByPlayer"+activePlayer);
+
     const coordinateNumbers = event.currentTarget.getAttribute("id").match(/\d+/g);
     const clickedCell = {
         x: Number(coordinateNumbers[0]),
@@ -146,23 +161,16 @@ function clickCell(event) {
 
     // add ownership of cell based on which player clicked
     if (activePlayer === 1){
-        event.currentTarget.textContent = "O";
-        event.currentTarget.classList.add("ownedByPlayer1");
         player1Cells.push(clickedCell);
         winConditionMet = hasPlayerWon(clickedCell, player1Cells);
     } else {
-        event.currentTarget.textContent = "X";
-        event.currentTarget.classList.add("ownedByPlayer2");
         player2Cells.push(clickedCell);
         winConditionMet = hasPlayerWon(clickedCell, player2Cells);
     }
 
     // if someone won congratulate winner and clear board
     if (winConditionMet === true){
-        if (activePlayer === 1)
-            alert("Red wins !!!");
-        else
-            alert("Blue wins !!!");
+        alert(PLAYER_INFO[activePlayer][name] + " wins !!!");
         clearBoard();
     }
 
