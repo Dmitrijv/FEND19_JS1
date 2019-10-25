@@ -46,12 +46,18 @@ let activePlayer = 1;
 const player1Cells = [];
 const player2Cells = [];
 
+function clearBoard() {
+    clearPlayerCells(player1Cells);
+    clearPlayerCells(player2Cells);
+}
+
 function clearPlayerCells(cells) {
     for (let i = 0; i < cells.length; i++) {
         const cell = document.querySelector("#cell-"+cells[i].x+"-"+cells[i].y);
         cell.classList.remove("ownedByPlayer1", "ownedByPlayer2");
         cell.textContent = "";
     }
+    cells.length = 0;
 }
 
 
@@ -153,24 +159,16 @@ function clickCell(event) {
 
     // if someone won congratulate winner and clear board
     if (winConditionMet === true){
-
         if (activePlayer === 1)
             alert("Red wins !!!");
         else
             alert("Blue wins !!!");
-
-        clearPlayerCells(player1Cells);
-        player1Cells.length = 0;
-        clearPlayerCells(player2Cells);
-        player2Cells.length = 0;
+        clearBoard();
     }
 
     if ((player1Cells.length+player2Cells.length) === (BOARD_WIDTH*BOARD_HEIGHT)){
         alert("Draw!!!");
-        clearPlayerCells(player1Cells);
-        player1Cells.length = 0;
-        clearPlayerCells(player2Cells);
-        player2Cells.length = 0;
+        clearBoard();
     }
 
     activePlayer = (activePlayer === 1) ? 2 : 1;
