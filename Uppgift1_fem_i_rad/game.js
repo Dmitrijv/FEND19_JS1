@@ -134,29 +134,21 @@ for (let y = 1; y <= BOARD_HEIGHT; y++) {
 table.appendChild(tbody);
 
 
-
-function mouseEnterCell(event) {
-    if (!(event.currentTarget.classList.contains("ownedByPlayer1") || event.currentTarget.classList.contains("ownedByPlayer2")))
-        event.currentTarget.classList.add("player"+activePlayer+"Mouseover");
-}
-
-function mouseLeaveCell(event) {
-    event.currentTarget.classList.remove("player1Mouseover", "player2Mouseover");
-}
-
 function clickCell(event) {
 
-    // if this cell is already owned by a player do nothing
-    if ( (event.currentTarget.classList.contains("ownedByPlayer1")) || event.currentTarget.classList.contains("ownedByPlayer2") )
+    const thisCell = event.currentTarget;
+
+    // cell is already owned by a player
+    if (thisCell.classList.contains("ownedByPlayer1") || thisCell.classList.contains("ownedByPlayer2"))
         return;
 
-    event.currentTarget.classList.remove("player1Mouseover", "player2Mouseover");
+    thisCell.classList.remove("player1Mouseover", "player2Mouseover");
 
     // update cell appearance
-    event.currentTarget.textContent = PLAYER_INFO[activePlayer]['marker'];
-    event.currentTarget.classList.add("ownedByPlayer"+activePlayer);
+    thisCell.textContent = PLAYER_INFO[activePlayer]['marker'];
+    thisCell.classList.add("ownedByPlayer"+activePlayer);
 
-    const coordinates = event.currentTarget.getAttribute("id").match(/\d+/g);
+    const coordinates = thisCell.getAttribute("id").match(/\d+/g);
     const clickedCell = { x: Number(coordinates[0]), y: Number(coordinates[1]), };
 
     PLAYER_INFO[activePlayer]["cells"].push(clickedCell);
@@ -179,22 +171,28 @@ function clickCell(event) {
 
 }
 
+function mouseEnterCell(event) {
+    const thisCell = event.currentTarget;
+    if (!(thisCell.classList.contains("ownedByPlayer1") || thisCell.classList.contains("ownedByPlayer2")))
+        thisCell.classList.add("player"+activePlayer+"Mouseover");
+}
+
+function mouseLeaveCell(event) {
+    event.currentTarget.classList.remove("player1Mouseover", "player2Mouseover");
+}
+
 
 
 function hasPlayerWon(clickedCell, ownedCells) {
 
     if (countHorizontalNeighbors(clickedCell) >= WINNING_LINE_LENGTH-1)
         return true;
-
-    if (countVerticalNeighbors(clickedCell) >= WINNING_LINE_LENGTH-1)
+    else if (countVerticalNeighbors(clickedCell) >= WINNING_LINE_LENGTH-1)
         return true;
-
-    if (countRightDiagonalNeighbors(clickedCell) >= WINNING_LINE_LENGTH-1)
+    else if (countRightDiagonalNeighbors(clickedCell) >= WINNING_LINE_LENGTH-1)
         return true;
-
-    if (countLeftDiagonalNeighbors(clickedCell) >= WINNING_LINE_LENGTH-1)
+    else if (countLeftDiagonalNeighbors(clickedCell) >= WINNING_LINE_LENGTH-1)
         return true;
-
     return false;
 
 
