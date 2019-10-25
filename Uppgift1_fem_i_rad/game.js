@@ -49,20 +49,20 @@ const PLAYER_INFO = {
     1:{
         name: "RED",
         marker: "X",
+        cells: player1Cells,
     },
     2:{
         name: "BLUE",
-        marker: "O"
+        marker: "O",
+        cells: player2Cells,
     },
 };
 
-
 let activePlayer = 1;
 
-
 function clearBoard() {
-    clearPlayerCells(player1Cells);
-    clearPlayerCells(player2Cells);
+    for (let playerID of Object.keys(PLAYER_INFO))
+        clearPlayerCells(PLAYER_INFO[playerID]["cells"]);
 }
 
 function clearPlayerCells(cells) {
@@ -160,18 +160,11 @@ function clickCell(event) {
         y: Number(coordinates[1]),
     };
 
-    let winConditionMet = false;
-    if (activePlayer === 1){
-        player1Cells.push(clickedCell);
-        winConditionMet = hasPlayerWon(clickedCell, player1Cells);
-    } else {
-        player2Cells.push(clickedCell);
-        winConditionMet = hasPlayerWon(clickedCell, player2Cells);
-    }
+    PLAYER_INFO[activePlayer]["cells"].push(clickedCell);
 
     // if someone won congratulate winner and clear board
-    if (winConditionMet === true){
-        alert(PLAYER_INFO[activePlayer][name] + " wins !!!");
+    if (hasPlayerWon(clickedCell, PLAYER_INFO[activePlayer]["cells"]) === true){
+        alert(PLAYER_INFO[activePlayer]["name"] + " wins !!!");
         clearBoard();
     }
 
