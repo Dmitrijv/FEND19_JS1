@@ -87,7 +87,7 @@ function updateMovesMadeLabel(movesMade) {
     else
         movesMadeLabel.textContent = movesMade+" moves made";
 }
-updateMovesMadeLabel(player1Cells.length + player2Cells.length);
+updateMovesMadeLabel(countAllClickedCells());
 
 
 
@@ -214,24 +214,22 @@ function hasPlayerWon(clickedCell, ownedCells) {
         return consecutiveCells(clickedCell, getNeighbourNorthWest) + consecutiveCells(clickedCell, getNeighbourSouthEast);
     }
 
-
     function consecutiveCells(clickedCell, neighbourDirectionCheck) {
-        let neigbors = 0;
+        let neighbours = 0;
         const pointerCell = {x: clickedCell.x, y: clickedCell.y};
         const maxDistance = (BOARD_WIDTH > BOARD_HEIGHT) ? BOARD_WIDTH : BOARD_HEIGHT;
-        while (neigbors < maxDistance){
+        while (neighbours < maxDistance){
             const neighbourCell = neighbourDirectionCheck(pointerCell);
             if (neighbourCell){
-                neigbors++;
+                neighbours++;
                 pointerCell.x = neighbourCell.x;
                 pointerCell.y = neighbourCell.y;
             } else {
                 break;
             }
         }
-        return neigbors;
+        return neighbours;
     }
-
     
     function getNeighbourNorth(cell) {
         return ownedCells.find(( neighbor ) => neighbor.y-1 === cell.y && neighbor.x === cell.x);
