@@ -78,8 +78,7 @@ function clearPlayerCells(cells) {
 const movesMadeLabel = document.querySelector("#moves-made");
 function updateMovesMadeLabel(movesMade) {
     if(movesMade === 0)
-        movesMadeLabel.textContent = "Five In A Row";
-        //movesMadeLabel.textContent = "Five In A Row "+BOARD_HEIGHT+"x"+BOARD_WIDTH;
+        movesMadeLabel.textContent = "Five In A Row"; // +BOARD_HEIGHT+"x"+BOARD_WIDTH;
     else if (movesMade === 1)
         movesMadeLabel.textContent = movesMade+" move made";
     else
@@ -155,10 +154,7 @@ function clickCell(event) {
     event.currentTarget.classList.add("ownedByPlayer"+activePlayer);
 
     const coordinates = event.currentTarget.getAttribute("id").match(/\d+/g);
-    const clickedCell = {
-        x: Number(coordinates[0]),
-        y: Number(coordinates[1]),
-    };
+    const clickedCell = { x: Number(coordinates[0]), y: Number(coordinates[1]), };
 
     PLAYER_INFO[activePlayer]["cells"].push(clickedCell);
 
@@ -166,7 +162,7 @@ function clickCell(event) {
     if (hasPlayerWon(clickedCell, PLAYER_INFO[activePlayer]["cells"]) === true){
         alert(PLAYER_INFO[activePlayer]["name"] + " wins !!!");
         clearBoard();
-    }
+    } else
 
     // if all cells on the board have been clicked it's a draw
     if ((player1Cells.length+player2Cells.length) === (BOARD_WIDTH*BOARD_HEIGHT)){
@@ -220,8 +216,8 @@ function hasPlayerWon(clickedCell, ownedCells) {
     function consecutiveCells(clickedCell, neighbourDirectionCheck) {
         let neigbors = 0;
         const pointerCell = {x: clickedCell.x, y: clickedCell.y};
-        const longestDistance = (BOARD_WIDTH > BOARD_HEIGHT) ? BOARD_WIDTH : BOARD_HEIGHT;
-        while (neigbors < longestDistance){
+        const maxDistance = (BOARD_WIDTH > BOARD_HEIGHT) ? BOARD_WIDTH : BOARD_HEIGHT;
+        while (neigbors < maxDistance){
             const neighbourCell = neighbourDirectionCheck(pointerCell);
             if (neighbourCell){
                 neigbors++;
