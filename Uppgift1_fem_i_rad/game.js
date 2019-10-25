@@ -74,6 +74,9 @@ function clearPlayerCells(cells) {
     cells.length = 0;
 }
 
+function countAllClickedCells() {
+    return Object.keys(PLAYER_INFO).reduce((sum, playerId) => {return sum + PLAYER_INFO[playerId]["cells"].length},0);
+}
 
 const movesMadeLabel = document.querySelector("#moves-made");
 function updateMovesMadeLabel(movesMade) {
@@ -164,7 +167,7 @@ function clickCell(event) {
         clearBoard();
 
     // if all cells on the board have been clicked it's a draw
-    } else if ((player1Cells.length+player2Cells.length) === (BOARD_WIDTH*BOARD_HEIGHT)){
+    } else if (countAllClickedCells() === (BOARD_WIDTH*BOARD_HEIGHT)){
         alert("Draw !!!");
         clearBoard();
     }
@@ -172,7 +175,7 @@ function clickCell(event) {
     activePlayer = (activePlayer === 1) ? 2 : 1;
 
     updateTurnLabel(activePlayer);
-    updateMovesMadeLabel(player1Cells.length + player2Cells.length);
+    updateMovesMadeLabel(countAllClickedCells());
 
 }
 
