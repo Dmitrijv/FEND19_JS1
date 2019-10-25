@@ -42,19 +42,16 @@ const BOARD_HEIGHT = 20;
 const BOARD_WIDTH = 20;
 const WINNING_LINE_LENGTH = 5;
 
-const player1Cells = [];
-const player2Cells = [];
-
 const PLAYER_INFO = {
     1:{
         name: "RED",
         marker: "X",
-        cells: player1Cells,
+        cells: [],
     },
     2:{
         name: "BLUE",
         marker: "O",
-        cells: player2Cells,
+        cells: [],
     },
 };
 
@@ -216,7 +213,7 @@ function hasPlayerWon(clickedCell, ownedCells) {
 
         let neighbours = 0;
         const pointerCell = {x: clickedCell.x, y: clickedCell.y};
-        const maxDistance = (BOARD_WIDTH > BOARD_HEIGHT) ? BOARD_WIDTH : BOARD_HEIGHT;
+        const maxDistance = Math.max(BOARD_WIDTH, BOARD_HEIGHT);
 
         while (neighbours < maxDistance){
             const neighbourCell = neighbourDirectionCheck(pointerCell);
