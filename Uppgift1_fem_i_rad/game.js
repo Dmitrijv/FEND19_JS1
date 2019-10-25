@@ -42,6 +42,9 @@ const BOARD_HEIGHT = 20;
 const BOARD_WIDTH = 20;
 const WINNING_LINE_LENGTH = 5;
 
+const player1Cells = [];
+const player2Cells = [];
+
 const PLAYER_INFO = {
     1:{
         name: "RED",
@@ -55,8 +58,7 @@ const PLAYER_INFO = {
 
 
 let activePlayer = 1;
-const player1Cells = [];
-const player2Cells = [];
+
 
 function clearBoard() {
     clearPlayerCells(player1Cells);
@@ -148,18 +150,17 @@ function clickCell(event) {
 
     event.currentTarget.classList.remove("player1Mouseover", "player2Mouseover");
 
+    // update cell appearance
     event.currentTarget.textContent = PLAYER_INFO[activePlayer]['marker'];
     event.currentTarget.classList.add("ownedByPlayer"+activePlayer);
 
-    const coordinateNumbers = event.currentTarget.getAttribute("id").match(/\d+/g);
+    const coordinates = event.currentTarget.getAttribute("id").match(/\d+/g);
     const clickedCell = {
-        x: Number(coordinateNumbers[0]),
-        y: Number(coordinateNumbers[1]),
+        x: Number(coordinates[0]),
+        y: Number(coordinates[1]),
     };
 
     let winConditionMet = false;
-
-    // add ownership of cell based on which player clicked
     if (activePlayer === 1){
         player1Cells.push(clickedCell);
         winConditionMet = hasPlayerWon(clickedCell, player1Cells);
@@ -174,8 +175,9 @@ function clickCell(event) {
         clearBoard();
     }
 
+    // if all cells on the board have been clicked it's a draw
     if ((player1Cells.length+player2Cells.length) === (BOARD_WIDTH*BOARD_HEIGHT)){
-        alert("Draw!!!");
+        alert("Draw !!!");
         clearBoard();
     }
 

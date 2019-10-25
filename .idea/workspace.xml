@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4cd2a4e-3f78-4312-8383-ff087efccebd" name="Default Changelist" comment="added a function to clear board">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Uppgift1_fem_i_rad/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/Uppgift1_fem_i_rad/game.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -36,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Uppgift1_fem_i_rad/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="151" column="68" lean-forward="true" selection-start-line="151" selection-start-column="68" selection-end-line="151" selection-end-column="68" />
+            <state relative-caret-position="378">
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
             </state>
           </provider>
         </entry>
@@ -501,7 +500,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241368000" />
+    <option name="totallyTimeSpent" value="241550000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -516,7 +515,7 @@
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4954955" visible="true" weight="0.18636848" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4954955" visible="true" weight="0.18636848" />
       <window_info id="Structure" order="1" sideWeight="0.5045045" side_tool="true" weight="0.16323908" />
       <window_info id="npm" order="2" sideWeight="0.5024155" side_tool="true" weight="0.19344473" />
       <window_info id="Image Layers" order="3" />
@@ -534,7 +533,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3204969" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49851853" visible="true" weight="0.39476237" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49851853" visible="true" weight="0.39476237" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5014815" side_tool="true" weight="0.5511222" />
       <window_info active="true" anchor="bottom" id="SVN Repositories" order="12" weight="0.32971016" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.31944445" />
@@ -963,8 +962,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Uppgift1_fem_i_rad/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="151" column="68" lean-forward="true" selection-start-line="151" selection-start-column="68" selection-end-line="151" selection-end-column="68" />
+        <state relative-caret-position="378">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
         </state>
       </provider>
     </entry>
