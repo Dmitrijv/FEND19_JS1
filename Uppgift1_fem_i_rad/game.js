@@ -199,25 +199,27 @@ function hasPlayerWon(clickedCell, ownedCells) {
 
 
     function countVerticalNeighbors(clickedCell) {
-        return consecutiveCells(clickedCell, getNeighbourNorth) + consecutiveCells(clickedCell, getNeighbourSouth);
+        return consecutiveCells(clickedCell, getNeighbourN) + consecutiveCells(clickedCell, getNeighbourS);
     }
 
     function countHorizontalNeighbors(clickedCell) {
-        return consecutiveCells(clickedCell, getNeighbourWest) + consecutiveCells(clickedCell, getNeighbourEast);
+        return consecutiveCells(clickedCell, getNeighbourW) + consecutiveCells(clickedCell, getNeighbourE);
     }
     
     function countRightDiagonalNeighbors(clickedCell) {
-        return consecutiveCells(clickedCell, getNeighbourNorthEast) + consecutiveCells(clickedCell, getNeighbourSouthWest);
+        return consecutiveCells(clickedCell, getNeighbourNE) + consecutiveCells(clickedCell, getNeighbourSW);
     }
 
     function countLeftDiagonalNeighbors(clickedCell) {
-        return consecutiveCells(clickedCell, getNeighbourNorthWest) + consecutiveCells(clickedCell, getNeighbourSouthEast);
+        return consecutiveCells(clickedCell, getNeighbourNW) + consecutiveCells(clickedCell, getNeighbourSE);
     }
 
     function consecutiveCells(clickedCell, neighbourDirectionCheck) {
+
         let neighbours = 0;
         const pointerCell = {x: clickedCell.x, y: clickedCell.y};
         const maxDistance = (BOARD_WIDTH > BOARD_HEIGHT) ? BOARD_WIDTH : BOARD_HEIGHT;
+
         while (neighbours < maxDistance){
             const neighbourCell = neighbourDirectionCheck(pointerCell);
             if (neighbourCell){
@@ -228,38 +230,39 @@ function hasPlayerWon(clickedCell, ownedCells) {
                 break;
             }
         }
+
         return neighbours;
     }
     
-    function getNeighbourNorth(cell) {
+    function getNeighbourN(cell) {
         return ownedCells.find(( neighbor ) => neighbor.y-1 === cell.y && neighbor.x === cell.x);
     }
 
-    function getNeighbourNorthEast(cell) {
+    function getNeighbourNE(cell) {
         return ownedCells.find(( neighbor ) => neighbor.y-1 === cell.y && neighbor.x+1 === cell.x);
     }
 
-    function getNeighbourEast(cell) {
+    function getNeighbourE(cell) {
         return ownedCells.find(( neighbor ) => neighbor.y === cell.y && (neighbor.x-1) === cell.x);
     }
 
-    function getNeighbourSouthEast(cell) {
+    function getNeighbourSE(cell) {
         return ownedCells.find(( neighbor ) => neighbor.y+1 === cell.y && (neighbor.x+1) === cell.x);
     }
 
-    function getNeighbourSouth(cell) {
+    function getNeighbourS(cell) {
         return ownedCells.find(( neighbor ) => neighbor.y+1 === cell.y && neighbor.x === cell.x);
     }
 
-    function getNeighbourSouthWest(cell) {
+    function getNeighbourSW(cell) {
         return ownedCells.find(( neighbor ) => neighbor.y+1 === cell.y && neighbor.x-1 === cell.x);
     }
 
-    function getNeighbourWest(cell) {
+    function getNeighbourW(cell) {
         return ownedCells.find(( neighbor ) => neighbor.y === cell.y && ((neighbor.x+1) === cell.x));
     }
 
-    function getNeighbourNorthWest(cell) {
+    function getNeighbourNW(cell) {
         return ownedCells.find(( neighbor ) => neighbor.y-1 === cell.y && neighbor.x-1 === cell.x);
     }
 
