@@ -151,7 +151,7 @@ function clickCell(event) {
     PLAYER_INFO[activePlayer]["cells"].push(clickedCell);
 
     // if someone won congratulate winner and clear board
-    if (hasPlayerWon(clickedCell, PLAYER_INFO[activePlayer]["cells"]) === true){
+    if (hasPlayerWon(clickedCell, activePlayer) === true){
         alert(PLAYER_INFO[activePlayer]["name"] + " wins !!!");
         clearBoard();
 
@@ -180,7 +180,9 @@ function mouseLeaveCell(event) {
 
 
 
-function hasPlayerWon(clickedCell, ownedCells) {
+function hasPlayerWon(clickedCell, activePlayer) {
+
+    const ownedCells = PLAYER_INFO[activePlayer]['cells'];
 
     if (countHorizontalNeighbors(clickedCell) >= WINNING_LINE_LENGTH-1)
         return true;
