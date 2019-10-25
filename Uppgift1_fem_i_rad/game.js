@@ -162,10 +162,9 @@ function clickCell(event) {
     if (hasPlayerWon(clickedCell, PLAYER_INFO[activePlayer]["cells"]) === true){
         alert(PLAYER_INFO[activePlayer]["name"] + " wins !!!");
         clearBoard();
-    }
 
     // if all cells on the board have been clicked it's a draw
-    if ((player1Cells.length+player2Cells.length) === (BOARD_WIDTH*BOARD_HEIGHT)){
+    } else if ((player1Cells.length+player2Cells.length) === (BOARD_WIDTH*BOARD_HEIGHT)){
         alert("Draw !!!");
         clearBoard();
     }
