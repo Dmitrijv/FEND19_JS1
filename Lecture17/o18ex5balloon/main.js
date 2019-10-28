@@ -23,7 +23,7 @@ function animateBalloon() {
     frames++;
     currentFontSize += fontChangePerFrame;
     balloon.style.fontSize = currentFontSize + 'px';
-    //console.log(currentFontSize);
+    //console.log(currentHeight);
     if (frames >= animationFrames) {
         clearInterval(intervalId);
         balloon.textContent = '💥';
