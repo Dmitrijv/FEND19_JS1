@@ -1,24 +1,19 @@
+/*
 
+1. wait
+Skapa ett Promise-objekt (du behöver inte skapa en funktion, bara ett Promise), som kör en resolve efter 500ms:
 
-function isSmall(num) {
-    return new Promise((resolve, reject) => {
+wait.then(function() {
+  console.log('We waited') // Detta körs efter 500ms
+})
 
-        if (isNaN(parseInt(num))){
-            reject("was not a number");
-        } else if (parseInt(num) > 100){
-            reject("was not small")
-        } else {
-            resolve("was small")
-        }
+ */
 
-    })
-}
+const wait = new Promise(resolve => {
+    setTimeout(resolve, 500);
+});
 
-isSmall("25")
-    .then(msg => {
-        console.log(msg);
-    })
-    .catch((error) => {
-        console.log(error);
-    })
-;
+wait.then(function() {
+    console.log('We waited') // Detta körs efter 500ms
+});
+
