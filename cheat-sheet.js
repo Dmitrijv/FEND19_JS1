@@ -44,3 +44,9 @@ function fibonacci(num, memo) {
 
 // check if two primitives are the same
 const valuesAreEqual = Object.is(val1, val2);
+
+
+
+// reduce object properties
+const salaries = { John: 20000, Ann: 26000, Pete: 24000 };
+const sum = Object.values(salaries).reduce((sum, value) => sum + value, 0); // sum => 70000
