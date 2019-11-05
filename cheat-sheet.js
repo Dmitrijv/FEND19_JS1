@@ -41,3 +41,6 @@ function fibonacci(num, memo) {
     return memo[num] = fibonacci(num - 1, memo) + fibonacci(num - 2, memo);
 }
 
+
+// check if two primitives are the same
+const valuesAreEqual = Object.is(val1, val2);
