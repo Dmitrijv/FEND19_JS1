@@ -28,5 +28,16 @@ console.log(str.slice(-4));     // expected output: "dog."
 console.log(str.slice(-9, -5)); // expected output: "lazy"
 
 
+// sort an array of number strings in descendiong order
+const digits = ["1", "32", "6", "21", "11"];
+digits = digits.sort(function (a, b) { return Number(b) - Number(a) }).join(""); // digits => [32, 21, 11, 6, 1]
 
+
+// use memoization to avoid repeating the same calculation in a recursinve function
+function fibonacci(num, memo) {
+    memo = memo || {};
+    if (memo[num]) return memo[num];
+    if (num <= 1) return memo[num] = 1;
+    return memo[num] = fibonacci(num - 1, memo) + fibonacci(num - 2, memo);
+}
 
