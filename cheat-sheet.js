@@ -33,7 +33,7 @@ const digits = ["1", "32", "6", "21", "11"];
 digits = digits.sort(function (a, b) { return Number(b) - Number(a) }).join(""); // digits => [32, 21, 11, 6, 1]
 
 
-// use memoization to avoid repeating the same calculation in a recursinve function
+// use memoization to avoid repeating the same calculation in a recursive function
 function fibonacci(num, memo) {
     memo = memo || {};
     if (memo[num]) return memo[num];
