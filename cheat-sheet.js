@@ -5,7 +5,7 @@
 */
 
 
-// delete a key from a key:value object
+// delete object property
 const person = {age: 12, name: "John Doe", height: "126cm"}
 delete person["height"]; //  person => {age: 12, name: "John Doe"}
 
@@ -56,4 +56,25 @@ const sum = Object.values(salaries).reduce((sum, value) => sum + value, 0); // s
 const string = 'arithmetics';
 const map = string.split("").reduce((map, letter) => { map[letter] = ~~map[letter] + 1; return map }, {});
 console.log(map); // { a: 1, r: 1, i: 2, t: 2, h: 1, m: 1, e: 1, c: 1, s: 1 }
+
+
+// counter function that demonstrates cosures
+function Counter() {
+  let count = 0;
+  return function() {
+    count++;
+    return count;
+  };
+}
+
+const counter = Counter();
+console.log(counter());
+console.log(counter());
+console.log(counter());
+
+const anotherCounter = Counter();
+console.log(anotherCounter());
+console.log(anotherCounter());
+console.log(anotherCounter());
+
 
