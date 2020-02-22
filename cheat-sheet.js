@@ -14,20 +14,20 @@ const chars = str1.split(""); // chars => ["o", "r", "a", "n", "g", "e"]
 
 // reverse a string
 const str2 = "plant";
-const reverse = str
+const reverse = str2
   .split("")
   .reverse()
-  .join(""); // reverse => "tnalp"
+  .join("");
 
 // extracts a section of a string and return it as a new string, without modifying the original string
 let str3 = "The quick brown fox jumps over the lazy dog.";
-console.log(str.slice(31)); // expected output: "the lazy dog."
-console.log(str.slice(4, 19)); // expected output: "quick brown fox"
-console.log(str.slice(-4)); // expected output: "dog."
-console.log(str.slice(-9, -5)); // expected output: "lazy"
+console.log(str3.slice(31)); // expected output: "the lazy dog."
+console.log(str3.slice(4, 19)); // expected output: "quick brown fox"
+console.log(str3.slice(-4)); // expected output: "dog."
+console.log(str3.slice(-9, -5)); // expected output: "lazy"
 
 // sort an array of number strings in descendiong order
-const digits = ["1", "32", "6", "21", "11"];
+let digits = ["1", "32", "6", "21", "11"];
 digits = digits
   .sort(function(a, b) {
     return Number(b) - Number(a);
@@ -43,7 +43,23 @@ function fibonacci(num, memo) {
 }
 
 // check if two primitives are the same
-const valuesAreEqual = Object.is(val1, val2);
+Object.is("foo", "foo"); // true
+// Object.is(window, window); // true
+
+Object.is("foo", "bar"); // false
+Object.is([], []); // false
+
+var foo = { a: 1 };
+var bar = { a: 1 };
+Object.is(foo, foo); // true
+Object.is(foo, bar); // false
+
+Object.is(null, null); // true
+
+// Special Cases
+Object.is(0, -0); // false
+Object.is(-0, -0); // true
+Object.is(NaN, 0 / 0); // true
 
 // reduce object properties
 const salaries = { John: 20000, Ann: 26000, Pete: 24000 };
@@ -75,6 +91,15 @@ const anotherCounter = Counter();
 console.log(anotherCounter());
 console.log(anotherCounter());
 console.log(anotherCounter());
+
+function urlGenerator(domain) {
+  return function(url) {
+    return `https://${url}.${domain}`;
+  };
+}
+
+const comUrl = urlGenerator("com");
+console.log(comUrl("google"));
 
 // extend array prototype with a custom function
 const array = [1, 2, 3, 4, 5];
